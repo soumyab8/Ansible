@@ -20,3 +20,6 @@
 ### Which variable will have higher precedence ?
 
 ### Local Variables > Global Variables
+
+
+# We can also supply the variables from the command line 
