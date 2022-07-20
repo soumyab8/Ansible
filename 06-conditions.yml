@@ -20,7 +20,8 @@
    
     - name: Demo on defined undefined key words 
       degub:
-        msg: "Sample is declared"
+        msg: "Sample is declared" 
+      when: 
 
 # If any of the task fails, the subsequest task won't be executed and it will be terminated then and there it self
 # defined and undefined are the predefined keywords 
