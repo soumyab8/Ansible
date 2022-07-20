@@ -13,7 +13,11 @@
       vars:
         URL: task.google.com 
 
-
+    - name: printing the URL 
+      ansible.builtin.debug:
+        msg: The value of URL is {{ URL }} 
+      vars:
+        URL: task.google.com 
 ### Which variable will have higher precedence ?
 
 ### Local Variables > Global Variables
