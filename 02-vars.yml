@@ -15,3 +15,5 @@
 
 
 ### Which variable will have higher precedence ?
+
+### Local Variables > Global Variables
