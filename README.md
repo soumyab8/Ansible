@@ -17,4 +17,5 @@ A Fact is nothing but a property of the target node. Before you run any playbook
 
 Ex: ansible all -i inventory -u centos -e ansible_password=DevOps321 -m setup
 
+
 Note: Above command will show you the list of all the FACTS that your ansible is covering.
