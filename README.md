@@ -29,5 +29,5 @@ Any action that you want to do is called a task
 A Fact is nothing but a property of the target node. Before you run any playbook, ansible collects all the facts and keep it ready.
 
 
-Ex: ansible 
+Ex: ansible -i invenetory all -m setup 
 ``
