@@ -20,7 +20,7 @@
       when: action
    
     - name: Demo on defined undefined key words 
-      degub:
+      debug:
         msg: "Sample is declared" 
       when: sample is defined 
 
