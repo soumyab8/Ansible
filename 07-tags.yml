@@ -15,4 +15,4 @@
 
     - name: Starting Appserver  
       debug: 
-        msg: Web Server Start in progress    
+        msg: App Server Start in progress    
