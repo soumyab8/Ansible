@@ -21,3 +21,11 @@ Any action that you want to do is called a task
     ex: Installing a package, checking the uptime of the machine , creating a user account . . .. 
 
 ``` 
+
+
+### What is a fact in ansible ?
+
+```
+A Fact is nothing but a property of the target node. Before you run any playbook, ansible collects all the facts and keep it ready.
+
+``
