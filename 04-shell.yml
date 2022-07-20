@@ -1,4 +1,4 @@
 - name: Demo on variables 
   hosts: all  
   tasks:
-  
+    - name":
