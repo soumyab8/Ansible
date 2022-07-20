@@ -22,7 +22,7 @@
 
 ### Which variable will have higher precedence ?
 
-### Command Line Variable > Local Variables > Global Variables
+### Command Line Variable > Local Variables >  Global Variables
 
 
 # We can also supply the variables from the command line and we refer it as run time variables.
