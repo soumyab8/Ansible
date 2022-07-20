@@ -8,4 +8,4 @@
 
     - name: Priniting the mac address
       ansible.builtin.debug:
-        msg: "{{ ansible_distribution }}"
+        msg: "{{ ansible_default_ipv4.macaddress }}"
