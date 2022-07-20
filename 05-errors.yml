@@ -1,7 +1,7 @@
 - name: Check whether tomcat is running or not 
   hosts: all  
   tasks:
-    - name: Run Shell Command 
+    - name: Check tomcat is running or not 
       shell: uptime
       register: OUT 
     
