@@ -1,4 +1,8 @@
 - name: Demo on tags  
   hosts: all  
   tasks:
-    - name: 
+    - name: Running Webserver installation 
+      debug: 
+        msg: Web Server installation  
+    
+    
