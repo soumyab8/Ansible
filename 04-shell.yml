@@ -9,6 +9,4 @@
       debug: 
         msg: "{{ OUT.stdout }}"
 
-
-
 ### Register helps you in taking the output and can be used any where of our choice.
