@@ -8,5 +8,6 @@
         msg: Hello from task1 of play1 
 
 
-a=100 
+a=100
+echo $a 
 
