@@ -11,7 +11,7 @@
       ansible.builtin.debug:
         msg: The value of URL is {{ URL }} 
       vars:
-        URL:
+        URL: task.google.com 
 
 
 
