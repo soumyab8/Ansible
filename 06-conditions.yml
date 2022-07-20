@@ -1,7 +1,7 @@
 - name: Demo on conditions 
   hosts: all  
   tasks:
-    - name: Check tomcat is running or not 
+    - name: Run this task only for CentOS Machines 
       shell: ps -ef |grep java | grep -v grep
       register: OUT 
       ignore_errors: yes 
