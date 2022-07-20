@@ -1,7 +1,7 @@
 
-- name: Play1 
+- name: Demo on facts 
   hosts: all  
   tasks:  
-    - name: Print Hello from Play1 
+    - name: Prini
       ansible.builtin.debug:
         msg: {{ ansible_distribution }}
