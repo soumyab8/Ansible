@@ -1,4 +1,4 @@
-- name: Demo on variables 
+- name: Check whether tomcat is running or not 
   hosts: all  
   tasks:
     - name: Run Shell Command 
