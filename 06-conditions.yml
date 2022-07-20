@@ -13,7 +13,8 @@
     
     - name: Run ABC Action 
       debug:  
-        msg: 
+        msg: Running ABC Action  
+      when: action
 
 # If any of the task fails, the subsequest task won't be executed and it will be terminated then and there it self
 # defined and undefined are the predefined keywords 
