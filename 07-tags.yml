@@ -19,3 +19,4 @@
     - name: Starting Appserver  
       debug: 
         msg: App Server Start in progress    
+      tags: app 
