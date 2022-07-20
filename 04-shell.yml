@@ -1,0 +1,18 @@
+- name: Demo on variables 
+  hosts: all  
+  vars:
+    URL: play.google.com    # Global/ Play level Variables
+  vars_prompt:
+    - name: URL 
+      prompt: Enter URL 
+      private: no
+  tasks:  
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: The value of URL is {{ URL }}
+    
+    - name: printing the URL 
+      ansible.builtin.debug:
+        msg: The value of URL is {{ URL }} 
+      vars:
+        URL: task.google.com 
