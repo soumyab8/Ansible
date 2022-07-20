@@ -15,9 +15,8 @@
 
     - name: printing the CLI_URL 
       ansible.builtin.debug:
-        msg: The value ofCLI_URL is {{ URL }} 
-      vars:
-        URL: task.google.com 
+        msg: The value of CLI_URL is {{ CLI_URL }} 
+
 ### Which variable will have higher precedence ?
 
 ### Local Variables > Global Variables
