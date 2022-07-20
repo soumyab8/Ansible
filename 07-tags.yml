@@ -5,6 +5,6 @@
       debug: 
         msg: Web Server installation  
 
-    - name: Starting Webserver installation 
+    - name: Starting Webserver  
       debug: 
-        msg: Web Server installation    
+        msg: Web Server instalStarlation    
