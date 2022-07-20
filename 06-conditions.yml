@@ -2,8 +2,8 @@
   hosts: all  
   tasks:
     - name: Run this task only for CentOS Machines 
-      shell: ps -ef |grep java | grep -v grep
-      register: OUT 
+      debug:    
+          msg: 
       ignore_errors: yes 
     
     - name: Starting tomcat 
