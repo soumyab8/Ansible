@@ -7,4 +7,4 @@
     
     - name: Starting tomcat 
       debug: 
-        msg: The value of exit code is {{ OUT.rc }} and std out is {{ OUT.stdout }}
+        msg: Starting Tomcat 
