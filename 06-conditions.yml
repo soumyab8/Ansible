@@ -3,9 +3,8 @@
   tasks:
     - name: Run this task only for CentOS Machines 
       debug:    
-          msg: 
-      ignore_errors: yes 
-    
+          msg: Hello To CentOS  
+       
     - name: Starting tomcat 
       debug: 
         msg: Starting Tomcat 
