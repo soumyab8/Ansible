@@ -6,8 +6,9 @@
           msg: Hello To CentOS  
       when: ansible_distribution == "CentOS"
 
-    - name: Starting tomcat 
-      debug: 
-        msg: Starting Tomcat 
+    - name: Run this task only for CentOS Machines 
+      debug:    
+          msg: Hello To CentOS  
+      when: ansible_distribution == "CentOS"
 
 # If any of the task fails, the subsequest task won't be executed and it will be terminated then and there it self
