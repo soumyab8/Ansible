@@ -2,6 +2,7 @@
 This repository will have our ansible learnings and our CM of the Project.
 
 What is a playbook ????
+
 A Playbook is a list of plays. That's why always a playbook starts as a list ( - )
 
 What is a play ?
