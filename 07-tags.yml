@@ -9,9 +9,9 @@
       debug: 
         msg: Web Server Start in progress    
 
-    - name: Running Webserver installation 
+    - name: Running AppServer installation 
       debug: 
-        msg: Web Server installation  
+        msg: App Server installation  
 
     - name: Starting Webserver  
       debug: 
