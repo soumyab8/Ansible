@@ -5,7 +5,7 @@
   tasks:  
     - name: Print URL
       ansible.builtin.debug:
-        msg: Hello from task1 of play1 
+        msg: The value of URL is {{ URL }}
 
 
 
