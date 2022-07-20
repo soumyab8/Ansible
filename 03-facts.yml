@@ -6,6 +6,6 @@
       ansible.builtin.debug:
         msg: "{{ ansible_distribution }}"
 
-    - name: Priniting the ip address
+    - name: Priniting the mac address
       ansible.builtin.debug:
         msg: "{{ ansible_distribution }}"
