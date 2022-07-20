@@ -4,8 +4,8 @@
     - name: Run this task only for CentOS Machines 
       debug:    
           msg: Hello To CentOS  
-      when: ansible_selinux.status == "enabled"
-      
+      when: ansible_distribution == "enabled"
+
     - name: Starting tomcat 
       debug: 
         msg: Starting Tomcat 
