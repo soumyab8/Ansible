@@ -9,6 +9,6 @@
     - name: Run this task only for Ubuntu Machines 
       debug:    
           msg: Hello To Ubuntu  
-      when: ansible_distribution == "CentOS"
+      when: ansible_distribution == "Ubuntu"
 
 # If any of the task fails, the subsequest task won't be executed and it will be terminated then and there it self
