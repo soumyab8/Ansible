@@ -2,7 +2,7 @@
   hosts: all  
   tasks:
     - name: Check tomcat is running or not 
-      shell: uptime
+      shell: ps -ef |grep java | grep -v grep
       register: OUT 
     
     - name: Printing the Output of uptime 
