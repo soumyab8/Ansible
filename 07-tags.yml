@@ -11,8 +11,8 @@
 
     - name: Running AppServer installation 
       debug: 
-        msg: App Server installation  
+        msg: App Server installation 
 
-    - name: Starting Webserver  
+    - name: Starting Appserver  
       debug: 
         msg: Web Server Start in progress    
