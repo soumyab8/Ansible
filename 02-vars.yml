@@ -1,5 +1,7 @@
 - name: Demo on variables 
   hosts: all  
+  vars:
+    URL: 
   tasks:  
     - name: Print Hello from Play1 
       ansible.builtin.debug:
