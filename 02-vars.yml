@@ -2,10 +2,6 @@
   hosts: all  
   vars:
     URL: play.google.com    # Global/ Play level Variables
-    courses:
-      - python 
-      - go 
-      - aws
   tasks:  
     - name: Print URL
       ansible.builtin.debug:
