@@ -2,6 +2,6 @@
 - name: Demo on facts 
   hosts: all  
   tasks:  
-    - name: Prini
+    - name: Priniting a fact
       ansible.builtin.debug:
         msg: {{ ansible_distribution }}
