@@ -3,7 +3,8 @@
   vars:
     URL: play.google.com    # Global/ Play level Variables
   vars_prompt:
-    URL: 
+    - name: URL 
+      
   tasks:  
     - name: Print URL
       ansible.builtin.debug:
