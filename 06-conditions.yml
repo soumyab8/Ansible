@@ -1,4 +1,4 @@
-- name: Check whether tomcat is running or not 
+- name: Demo on conditions 
   hosts: all  
   tasks:
     - name: Check tomcat is running or not 
