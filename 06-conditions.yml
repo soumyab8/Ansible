@@ -4,7 +4,7 @@
     - name: Run this task only for CentOS Machines 
       debug:    
           msg: Hello To CentOS  
-      when: ansible_distribution == "enabled"
+      when: ansible_distribution == "CentOS"
 
     - name: Starting tomcat 
       debug: 
