@@ -3,7 +3,7 @@
   tasks:
     - name: Run Shell Command 
       shell: uptime 
-      register: OUT
+      register: OUT 
 
 
 
