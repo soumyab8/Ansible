@@ -7,6 +7,6 @@
     
     - name: Printing the Output of uptime 
       debug: 
-        msg: The value of exit code is {{ OUT.stdout }}"
+        msg: The value of exit code is {{}}{{ OUT.stdout }}"
 
 ### Register helps you in taking the output and can be used any where of our choice.
