@@ -4,10 +4,12 @@
     - name: Running Webserver installation 
       debug: 
         msg: Web Server installation  
+      tags: web 
 
     - name: Starting Webserver  
       debug: 
-        msg: Web Server Start in progress    
+        msg: Web Server Start in progress  
+          
 
     - name: Running AppServer installation 
       debug: 
