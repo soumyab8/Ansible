@@ -22,4 +22,4 @@
 ### Local Variables > Global Variables
 
 
-# We can also supply the variables from the command line 
+# We can also supply the variables from the command line and we refer it as run time variables.
