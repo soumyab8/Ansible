@@ -4,6 +4,10 @@
     - name: Run Shell Command 
       shell: uptime 
       register: OUT 
+    
+    - name: Printing the Output of uptime 
+      debug: 
+        msg: "{{OUT }}"
 
 
 
