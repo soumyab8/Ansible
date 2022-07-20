@@ -3,7 +3,7 @@
   vars:
     URL: play.google.com
   tasks:  
-    - name: Print Hello from Play1 
+    - name: Print URL
       ansible.builtin.debug:
         msg: Hello from task1 of play1 
 
