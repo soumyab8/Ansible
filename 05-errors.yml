@@ -5,6 +5,6 @@
       shell: ps -ef |grep java | grep -v grep
       register: OUT 
     
-    - name: Printing the Output of uptime 
+    - name: Starting tomcat 
       debug: 
         msg: The value of exit code is {{ OUT.rc }} and std out is {{ OUT.stdout }}
