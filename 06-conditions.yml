@@ -12,3 +12,4 @@
       when: ansible_distribution == "Ubuntu"
 
 # If any of the task fails, the subsequest task won't be executed and it will be terminated then and there it self
+# defined and undefined are the predefined keywords 
