@@ -9,4 +9,4 @@
       debug: 
         msg: The value of exit code is {{ OUT.rc }} and std out is {{ OUT.stdout }}
 
-### Register helps you in taking the output and can be used any where of our choice.
+### Register helps you in taking the output and can be used any where of our choice. 
