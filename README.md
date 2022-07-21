@@ -41,3 +41,5 @@ ROLES Helps you in
 1) Organising the code 
 2) Increases the visibility of the code 
 3) Duplicate code can be avoided 
+4) Code can be re-used
+5) Changes of intended actions like deletion / uptating /creation will have 
