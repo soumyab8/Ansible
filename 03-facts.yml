@@ -1,5 +1,5 @@
 - name: Demo on facts 
-  hosts: all  
+  hosts: PROD  
   tasks:  
     - name: Priniting a fact
       ansible.builtin.debug:
