@@ -7,3 +7,7 @@
       ansible.builtin.template:
         src: proxyy.conf 
         dest: /home/centos 
+
+
+sed -e 
+sed -e -i
