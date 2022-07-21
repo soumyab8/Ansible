@@ -2,10 +2,5 @@
   hosts: all 
   tasks:  
     - name: Demo on loop 
-      shell: id 
-      register: OUT  
-      become: yes  # sudo su - 
-      
-    - name: Display the output  
       debug:
         msg: "{{ OUT }}"
