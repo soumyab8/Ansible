@@ -11,7 +11,7 @@
   tasks:  
     - name: Printing a file variable 
       ansible.builtin.debug:
-        msg: The value of URL is {{ URL }}
+        msg: The value of URL is {{ FILE_URL }}
 
     - name: Print URL
       ansible.builtin.debug:
