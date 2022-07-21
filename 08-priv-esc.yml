@@ -1,5 +1,6 @@
 - name: Demo on privilege escalation 
   hosts: all 
+  become: yes  # sudo su - 
   tasks:  
     - name: Just a shell command 
       shell: id 
