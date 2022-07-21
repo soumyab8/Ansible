@@ -1,4 +1,4 @@
 - name: Demo on copying the file to the remote machines 
   hosts: all 
   tasks:
-    
+  
