@@ -19,7 +19,7 @@
 
     - name: printing the CLI_URL 
       ansible.builtin.debug:
-        msg: The value of CLI_URL is {{ CLI_URL }} 
+        msg: "{{ CLI_URL }}"
 
 ### Which variable will have higher precedence ?
 
