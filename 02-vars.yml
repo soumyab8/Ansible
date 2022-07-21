@@ -1,6 +1,7 @@
 - name: Demo on variables 
   hosts: all  
-  vars
+  vars_files:
+    - 
   vars:
     URL: play.google.com    # Global/ Play level Variables
   vars_prompt:
