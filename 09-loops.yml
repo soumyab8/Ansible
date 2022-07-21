@@ -3,7 +3,7 @@
   tasks:  
     - name: Demo on loop 
       debug:
-        msg: value is ??????? 
+        msg: value is {{ item }}
       loop:
         - 10
         - 20  
