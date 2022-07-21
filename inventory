@@ -1,5 +1,5 @@
 [PROD]
-ratings-prod.roboshop.internal
+frontend.roboshop.internal
 
 [DEV]
 upi.roboshop.internal
