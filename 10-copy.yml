@@ -5,3 +5,6 @@
       ansible.builtin.copy:
         src: proxy.conf 
         dest: /home/centos 
+        owner: foo
+        group: foo
+        mode: '0644'
