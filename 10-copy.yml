@@ -7,4 +7,4 @@
         dest: /home/centos 
         owner: sushant
         group: sushant
-        mode: '0644'
+        mode: '0770'
