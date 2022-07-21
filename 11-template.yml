@@ -1,7 +1,7 @@
 - name: Demo on copying the file to the remote machines with a template 
   hosts: all 
   vars:
-    HOSTNAME
+    HOSTNAME: play.google.co
   tasks:
     - name: copy a proxy file to remote nodes 
       ansible.builtin.copy:
