@@ -1,7 +1,7 @@
-- name: Demo on copying the file to the remote machines 
+- name: Demo on copying the file to the remote machines with a template 
   hosts: all 
   tasks:
     - name: copy a proxy file to remote nodes 
       ansible.builtin.copy:
-        src: proxy.conf 
+        src: proxyy.conf 
         dest: /home/centos 
