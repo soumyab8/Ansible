@@ -1,7 +1,7 @@
-- name: Demo on privilege escalation 
+- name: Demo on loops 
   hosts: all 
   tasks:  
-    - name: Just a shell command 
+    - name: Demo on loop 
       shell: id 
       register: OUT  
       become: yes  # sudo su - 
