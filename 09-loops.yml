@@ -6,7 +6,7 @@
         msg: "value is {{ item }}"
       loop:  
         - 10
-        - 20  
+        - 10  
         - 30
         - abc
 # Each and every entry in a loop is referred as a item variable 
