@@ -5,5 +5,5 @@
   tasks:
     - name: copy a proxy file to remote nodes 
       ansible.builtin.copy:
-        src: proxyy.conf 
+        src: proxyyy.conf 
         dest: /home/centos 
