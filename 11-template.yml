@@ -4,6 +4,6 @@
     name: play.google.com 
   tasks:
     - name: copy a proxy file to remote nodes 
-      ansible.builtin.template:
+      ansible.builtin.copy:
         src: proxyyy.conf 
         dest: /home/centos 
