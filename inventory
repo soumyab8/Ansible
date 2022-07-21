@@ -1,5 +1,5 @@
 [frontend]
 frontend.roboshop.internal
 
-[DEV]
-upi.roboshop.internal
+[catalogue]
+catalogue.roboshop.internal
