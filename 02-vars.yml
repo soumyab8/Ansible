@@ -1,7 +1,7 @@
 - name: Demo on variables 
   hosts: all  
   vars_files:
-    - demo-
+    - proj-A-file-vars.yml
   vars:
     URL: play.google.com    # Global/ Play level Variables
   vars_prompt:
