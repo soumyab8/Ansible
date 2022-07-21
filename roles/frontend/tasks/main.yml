@@ -1,4 +1,4 @@
 - name: Install nginx
   ansible.builtin.package:
-    name: log4j-4.1 
+    name: nginx 
     state: present 
