@@ -4,7 +4,7 @@
     - name: Demo on loop 
       debug:
         msg: "value is {{ item }}"
-      loop:
+      loop:  
         - 10
         - 20  
         - 30
