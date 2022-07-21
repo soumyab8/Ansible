@@ -6,6 +6,6 @@
         msg: value is ??????? 
       loop:
         - 10
-        - 20 
+        - 20  
         - 30
         - abc
