@@ -1,4 +1,3 @@
-
 - name: Demo on facts 
   hosts: all  
   tasks:  
