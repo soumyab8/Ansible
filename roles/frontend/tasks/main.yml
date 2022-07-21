@@ -11,5 +11,5 @@
 
 - name: Cleanup of Old HTML Content 
   ansible.builtin.file:
-    path: /etc/foo.txt
+    path: /usr/share/nginx/html
     state: absent
