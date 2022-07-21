@@ -13,3 +13,8 @@
   ansible.builtin.file:
     path: /usr/share/nginx/html
     state: absent    # Absent deletes the files.
+
+- name: copy a proxy file to remote nodes 
+      ansible.builtin.copy:
+        src: proxy.conf 
+        dest: /home/centos 
