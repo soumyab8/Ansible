@@ -1,4 +1,4 @@
 - name: Install nginx
   ansible.builtin.package:
-    name: ntpdate
+    name: nginx 
     state: present
