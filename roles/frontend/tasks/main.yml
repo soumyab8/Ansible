@@ -9,7 +9,7 @@
     dest: /tmp 
     remote_src: yes  ## This will be yes, if the source file is not in the ANSIBLE SERVER
 
-- name: Remove file (delete file)
+- name: Cleanup 
   ansible.builtin.file:
     path: /etc/foo.txt
     state: absent
