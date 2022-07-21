@@ -37,7 +37,8 @@ Note: Above command will show you the list of all the FACTS that your ansible is
 ####
 
 
-ANSIBLE ROLES Helps you in
+# ANSIBLE ROLES Helps you in :
+```
 1) Organising the code 
 2) Increases the visibility of the code 
 3) Duplicate code can be avoided 
