@@ -4,7 +4,12 @@
     - name: check about tomcat
       shell: ps -ef | grep java | grep -v grep
       register: OUT
+      ignore_errors: yes
 
     - name: starting tomcat
       debug:
         msg: Starting tomcat
+
+        ## here task1 will fail as shell can't find the output. 
+        ##if any tasks fails, the next/subsquent tasks wont get executed.
+        ## if you wanna ignore error, mention that
