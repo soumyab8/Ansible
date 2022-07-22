@@ -11,6 +11,6 @@
 
 - name: Copy the {{COMPONENT}} content to {{APPUSER}} home directory 
   ansible.builtin.copy:
-     src: /tmp/frontend-main/static/
+     src: /tmp/{{}}-main/static/
      dest: /usr/share/nginx/html
      remote_src: yes
