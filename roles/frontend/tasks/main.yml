@@ -5,7 +5,7 @@
 
 - name: Download and extract 
   ansible.builtin.unarchive:
-    src: https://github.com/stans-robot-project/frontend/archive/main.zip
+    src: https://github.com/stans-robot-project/{{COMPONENT}}/archive/main.zip
     dest: /tmp 
     remote_src: yes  ## This will be yes, if the source file is not in the ANSIBLE SERVER
 
@@ -31,6 +31,6 @@
     name: nginx
     state: restarted
     enabled: yes 
-    
+
 - name: Disabling auto shutdown 
   shell: disable-auto-shutdown && set-hostname {{ COMPONENT }}
