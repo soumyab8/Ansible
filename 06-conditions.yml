@@ -21,5 +21,5 @@
 
      - name: defined and undefined keywords
        debug:
-         msg: "sample is decalared"
+        msg: "sample is decalared"
        when: sample is defined
