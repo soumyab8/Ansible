@@ -10,7 +10,7 @@
 
 - name: Cleanup of {{COMPONENT}} and sorting the permissions
   ansible.builtin.include_role:
-    name: common 
+    name: common r
     tasks_from: cleanup
   
 - name: Install packages based on package.json.
