@@ -1,0 +1,7 @@
+- name: copy files with  template
+  hosts: all
+  tasks:
+    - name: copy files using template
+      ansible.builtin.copy:
+        src: proxy.conf
+        dest: /home/centos
