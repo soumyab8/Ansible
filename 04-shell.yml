@@ -3,3 +3,7 @@
   tasks:  
     - name: Run shell command
       shell: uptime
+      register: OUT
+
+
+      ## Register is helpful in taking the output and using it wherever required.
