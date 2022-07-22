@@ -6,4 +6,14 @@
     name: 
       - nodejs 
       - gcc-c++ 
-    state: present   
+    state: present 
+
+- name: Creating Appuser account {{APPUSER}}
+  ansible.builtin.include_role:
+    name: common 
+    tasks_from: create-user 
+  
+- name: Download and extracting {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common 
+    tasks_from: download   
