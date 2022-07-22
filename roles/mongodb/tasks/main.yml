@@ -21,4 +21,6 @@
     enabled: yes  
 
 - name: Disabling auto shutdonw 
-  
+    - name: Run Shell Command 
+      shell: uptime
+      register: OUT 
