@@ -1,4 +1,4 @@
-- name: Download and extract 
+- name: Download and extracting {{COMPONENT}}
   ansible.builtin.unarchive:
     src: "{{REPO_URL}}"
     dest: /tmp 
