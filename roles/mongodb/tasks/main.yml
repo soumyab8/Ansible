@@ -26,7 +26,5 @@
     dest: /tmp 
     remote_src: yes  ## This will be yes, if the source file is not in the ANSIBLE SERVER
 
-
-
 - name: Disabling auto shutdown 
   shell: disable-auto-shutdown && set-hostname {{ COMPONENT }}
