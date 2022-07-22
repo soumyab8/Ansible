@@ -21,6 +21,4 @@
     enabled: yes  
 
 - name: Disabling auto shutdonw 
-    - name: Run Shell Command 
-      shell: uptime
-      register: OUT 
+  shell: disable-auto-shutdonw && set-hostname "{{ COMPONENT }}"
