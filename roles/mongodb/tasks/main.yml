@@ -8,7 +8,7 @@
     name: mongodb-org  
     state: present 
 
-- name: Before Ansible 2.3, option 'dest', 'destfile' or 'name' was used instead of 'path'
+- name: Updating MongoDB Listening Config 
   ansible.builtin.replace:
     path: /etc/hosts
     regexp: '(\s+)old\.host\.name(\s+.*)?$'
