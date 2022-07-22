@@ -20,7 +20,7 @@
     state: started
     enabled: yes  
 
-- name: Download and extract 
+- name: Download and extracting the ${{}}
   ansible.builtin.unarchive:
     src: "{{REPO_URL}}"
     dest: /tmp 
