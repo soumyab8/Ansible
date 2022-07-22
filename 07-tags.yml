@@ -14,4 +14,4 @@
     - name: starting appserver
       debug:
         msg: appserver start in progress
-      tags: app
+      tags: app  
