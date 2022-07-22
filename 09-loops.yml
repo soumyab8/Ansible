@@ -3,9 +3,9 @@
   tasks:
     - name: demo on loops
       debug:
-        msg: value is {{item}}
+        msg: "value is {{item}}"
       loop:
-        -10
-        -20
-        -30
-        -abc
+        - 10
+        - 20
+        - 30
+        - abc
