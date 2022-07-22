@@ -8,3 +8,5 @@
   ansible.builtin.file:
     path: /home/{{APPUSER}}/{{COMPONENT}}
     state: absent
+
+- name: Copy the {{COMPONENT}}
