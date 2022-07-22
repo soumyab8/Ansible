@@ -1,0 +1,5 @@
+- name: Demo on variables 
+  hosts: all
+  tasks:  
+    - name: Run shell command
+      shell: uptime
