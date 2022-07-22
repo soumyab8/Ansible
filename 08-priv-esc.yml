@@ -1,0 +1,10 @@
+- name: demo on previlige escalation
+  hosts: all
+  tasks:
+    - name: just a shell command
+      shell: id
+      register: OUT
+
+    - name: printing the id
+      debug:
+        msg: the ID is {{OUT}}
