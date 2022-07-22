@@ -5,5 +5,9 @@
       shell: uptime
       register: OUT
 
+     -name: printing the output
+      debug:
+        msg: "{{OUT}}" 
+
 
       ## Register is helpful in taking the output and using it wherever required.
