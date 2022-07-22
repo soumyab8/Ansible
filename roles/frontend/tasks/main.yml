@@ -8,3 +8,14 @@
     src: https://github.com/stans-robot-project/frontend/archive/main.zip
     dest: /tmp
     remote_src: yes
+
+- name: cleanup
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent
+
+- name: copy of frontend content to nginx path
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/static/
+    dest: /usr/share/nginx/html
+  remote_src: yes
