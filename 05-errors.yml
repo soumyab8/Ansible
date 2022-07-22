@@ -1,0 +1,10 @@
+- name: Check if tomcat is running or not
+  hosts: all
+  tasks:
+    - name: check about tomcat
+      shell: ps -ef | grep java | grep -v grep
+      register: OUT
+
+    - name: starting tomcat
+      debug:
+        msg: Starting tomcat

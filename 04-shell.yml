@@ -11,3 +11,4 @@
 
 
       ## Register is helpful in taking the output and using it wherever required.
+      ## use OUT.stdout in case only expected output is required
