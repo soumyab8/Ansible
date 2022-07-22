@@ -3,7 +3,7 @@
     name: nginx 
     state: present 
 
-- name: Run tasks/other.yaml instead of 'main'
+- name: Download and extracting {{COMPONENT}}
   ansible.builtin.include_role:
     name: myrole
     tasks_from: other
