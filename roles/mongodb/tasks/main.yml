@@ -20,12 +20,10 @@
     state: started
     enabled: yes  
 
-- name: Download and extracting the {{ COMPONENT }} repo 
-  ansible.builtin.unarchive:
-    src: "{{REPO_URL}}"
-    dest: /tmp 
-    remote_src: yes  ## This will be yes, if the source file is not in the ANSIBLE SERVER
-
+- name: Download and extracting {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common 
+    tasks_from: download 
 
 - name: Loading Catalogue and Users Scahme 
   community.mongodb.mongodb_shell:
