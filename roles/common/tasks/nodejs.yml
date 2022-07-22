@@ -10,9 +10,9 @@
 
 - name: Cleanup of {{COMPONENT}} and sorting the permissions
   ansible.builtin.include_role:
-    name: common r
+    name: common
     tasks_from: cleanup
-  
+
 - name: Install packages based on package.json.
   community.general.npm:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
