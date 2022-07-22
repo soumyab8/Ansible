@@ -4,3 +4,9 @@
     - name: Print fact
       ansible.builtin.debug:
         msg: "{{ ansible_distribution }}"
+
+    - name: Print mac address
+      ansible.builtin.debug:
+        msg: "{{ ansible_default_ipv4.mac_address }}"
+
+        ## if a variable is at start of line, then include it in double quotes.
