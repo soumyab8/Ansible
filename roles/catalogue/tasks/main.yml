@@ -9,4 +9,4 @@
     path: /home/{{APPUSER}}/{{COMPONENT}}
     state: absent
 
-- name: Copy the {{COMPONENT}}
+- name: Copy the {{COMPONENT}} content to {{APPUSER}}
