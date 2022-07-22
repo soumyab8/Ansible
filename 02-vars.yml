@@ -16,4 +16,8 @@
     - name: Print the CLI url
       ansible.builtin.debug:
         msg: The value of CLI URL is {{CLI_URL}}  #no variable is declared and it will throw an exception
+
+        #we can supply variables from command line also referred as run time variable.
+
+        ### CLI variables > Local vars > Global vars
           
