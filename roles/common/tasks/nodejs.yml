@@ -8,7 +8,7 @@
       - gcc-c++ 
     state: present 
 
-- name: Creating Appuser account {{APPUSER}}
+- name: Cleanup of {{}}
   ansible.builtin.include_role:
     name: common 
     tasks_from: cleanup
