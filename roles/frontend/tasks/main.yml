@@ -31,7 +31,7 @@
     state: restarted
     enabled: yes 
 
-- name: Download and extracting {{COMPONENT}}
+- name: Set-hostname 
   ansible.builtin.include_role:
     name: common 
     tasks_from: download 
