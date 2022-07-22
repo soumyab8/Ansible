@@ -8,6 +8,6 @@
       - gcc-c++ 
     state: present   
 
-- name: Creating APP
+- name: Creating Appuser account {{APPUSER}}
   ansible.builtin.user:
     name: johnd
