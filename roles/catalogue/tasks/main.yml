@@ -3,3 +3,22 @@
     name: common 
     tasks_from: nodejs
 
+- name: Configure Yum Repos 
+  ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+
+- name: Installing {{COMPONENT}}
+  ansible.builtin.package:
+    name: 
+      - nodejs 
+      - gcc-c++ 
+    state: present 
+
+- name: Creating Appuser account {{APPUSER}}
+  ansible.builtin.include_role:
+    name: common 
+    tasks_from: create-user 
+  
+- name: Download and extracting {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common 
+    tasks_from: download   
