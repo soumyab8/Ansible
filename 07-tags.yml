@@ -3,12 +3,15 @@
   tasks:
     - name: running webserver installation
       debug:
-        msg: Web server installation
+        msg: webserver installation
+      tags: web
 
     - name: starting webserver
       debug:
-        msg: Web server start in progress
+        msg: webserver start in progress
+      tags: web
 
     - name: starting appserver
       debug:
         msg: appserver start in progress
+      tags: app
