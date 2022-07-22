@@ -20,5 +20,7 @@
     state: started
     enabled: yes  
 
+
+
 - name: Disabling auto shutdown 
   shell: disable-auto-shutdown && set-hostname {{ COMPONENT }}
