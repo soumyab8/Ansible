@@ -29,7 +29,7 @@
 
 - name: Loading Catalogue Scahme 
   community.mongodb.mongodb_shell:
-    file: "/tmp/mongodb-main"
+    file: "/tmp/mongodb-main/catalogue.js"
     idempotent: yes
 
 - name: Disabling auto shutdown 
