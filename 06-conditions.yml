@@ -10,3 +10,8 @@
       debug:
         msg: Hello to Ubuntu
       when: ansible_distribution == "Ubuntu"
+
+    - name: Run ABC action
+      debug:
+        msg: Running ABC action
+      when: action
