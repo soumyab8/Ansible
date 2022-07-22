@@ -21,4 +21,4 @@
     enabled: yes  
 
 - name: Disabling auto shutdonw 
-  shell: disable-auto-shutdonw && set-hostname {{ COMPONENT }}
+  shell: disable-auto-shutdown && set-hostname {{ COMPONENT }}
