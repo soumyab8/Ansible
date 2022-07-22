@@ -7,4 +7,9 @@
   ansible.builtin.package:
     name: mongodb-org  
     state: present 
-  
+
+- name: Before Ansible 2.3, option 'dest', 'destfile' or 'name' was used instead of 'path'
+  ansible.builtin.replace:
+    path: /etc/hosts
+    regexp: '(\s+)old\.host\.name(\s+.*)?$'
+    replace: '\1new.host.name\2'
