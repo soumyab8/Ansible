@@ -3,3 +3,7 @@
      src: mongodb.repo 
      dest: /etc/yum.repos.d/mongodb.repo 
 
+- name: Installing nginx
+  ansible.builtin.package:
+    name: nginx 
+    state: present 
