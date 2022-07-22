@@ -1,5 +1,6 @@
 - name: demo on previlige escalation
   hosts: all
+  become: yes
   tasks:
     - name: just a shell command
       shell: id
