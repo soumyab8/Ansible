@@ -1,7 +1,7 @@
 - name: Configuring NodeJS 
   ansible.builtin.include_role:
     name: common 
-    tasks_from: create-user 
+    tasks_from: nodejs
 
 - name: Creating Appuser account {{APPUSER}}
   ansible.builtin.include_role:
