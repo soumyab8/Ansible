@@ -5,7 +5,7 @@
 
 - name: Download and extracting {{COMPONENT}}
   ansible.builtin.include_role:
-    name: myrole
+    name: 
     tasks_from: other
 
 - name: Cleanup of Old HTML Content 
