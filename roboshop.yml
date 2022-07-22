@@ -2,4 +2,4 @@
   hosts: mongodb  
   become: yes
   roles:  
-    - ""
+    - "{{ COMPONENT }}"
