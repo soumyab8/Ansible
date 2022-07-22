@@ -8,7 +8,7 @@
       - gcc-c++ 
     state: present 
 
-- name: Cleanup of {{}}
+- name: Cleanup of {{COMPONENT}} and sorting the permissions
   ansible.builtin.include_role:
     name: common 
     tasks_from: cleanup
