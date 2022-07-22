@@ -5,7 +5,7 @@
       shell: uptime
       register: OUT
 
-     -name: printing the output
+    - name: printing the output of uptime
       debug:
         msg: "{{OUT}}" 
 
