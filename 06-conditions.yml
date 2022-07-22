@@ -2,6 +2,7 @@
   hosts: all
   vars:
     action: false
+    sample: xyz
   tasks:
     - name: Run the task for only centOS machines
       debug:
@@ -17,3 +18,8 @@
       debug:
         msg: Running ABC action
       when: action
+
+     - name: defined and undefined keywords
+       debug:
+         msg: "sample is decalared"
+       when: sample is defined
