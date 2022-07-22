@@ -12,3 +12,8 @@
         msg: The value of URL is {{URL}}
       vars:
         URL: task.google.com     #task level variable
+
+    - name: Print the CLI url
+      ansible.builtin.debug:
+        msg: The value of CLI URL is {{CLI_URL}}  #no variable is declared and it will throw an exception
+          
