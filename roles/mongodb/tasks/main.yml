@@ -31,6 +31,7 @@
   community.mongodb.mongodb_shell:
     file: "/tmp/mongodb-main/catalogue.js"
     idempotent: yes
+  loop: 
 
 - name: Loading User Scahme 
   community.mongodb.mongodb_shell:
