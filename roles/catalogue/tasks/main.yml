@@ -11,3 +11,4 @@
 - name: Creating Appuser account {{APPUSER}}
   ansible.builtin.user:
     name: "{{APPUSER}}"
+  
