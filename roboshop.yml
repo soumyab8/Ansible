@@ -4,4 +4,4 @@
   roles:  
     # - frontend 
     # - catalogue 
-    # - mongodb
+    - mongodb
