@@ -19,7 +19,7 @@
         msg: Running ABC action
       when: action
 
-     - name: defined and undefined keywords
-       debug:
-          msg: "sample is decalared"
-       when: sample is defined
+    - name: defined and undefined keywords
+      debug:
+        msg: "sample is decalared"
+      when: sample is defined
