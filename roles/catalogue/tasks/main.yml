@@ -5,5 +5,5 @@
   ansible.builtin.package:
     name: 
       - nodejs 
-      - gcc-c 
+      - gcc-c++ 
     state: present  
