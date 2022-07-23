@@ -7,3 +7,9 @@
   ansible.builtin.package:
     name: mysql-community-server
     state: present 
+
+- name: Starting {{COMPONENT}} 
+  ansible.builtin.service:
+    name: mongod
+    state: started
+    enabled: yes  
