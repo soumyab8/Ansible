@@ -5,7 +5,7 @@
 
 - name: copying the systemd file 
   ansible.builtin.copy:
-     src: mongodb.repo 
+     src: systemd.service  
      dest: /etc/yum.repos.d/mongodb.repo 
 
 
