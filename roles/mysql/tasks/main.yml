@@ -20,4 +20,9 @@
   community.mysql.mysql_info:
     login_user: root
     login_password: RoboShop@1
-    filter: version
+    ignore_errors: yes
+    register: mysql_stat
+
+- name: Reset password
+  debug:
+    msg: restting password and the info is {{mysql_stat}}
