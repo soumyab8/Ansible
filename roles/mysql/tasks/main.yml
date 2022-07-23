@@ -25,4 +25,6 @@
   register: mysql_stat 
 
 - name: Resetting the DB Paasword
-  when: mysql_stat.failed  
+  ansible.builtin.service:
+
+grep "temporary password" /var/log/mysqld.log | awk '{print $NF}'
