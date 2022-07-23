@@ -7,6 +7,7 @@
   ansible.builtin.copy:
      src: systemd.service  
      dest: /etc/systemd/system/{{COMPONENT}}.service
+     
 - name: Set-hostname 
   ansible.builtin.include_role:
     name: common 
