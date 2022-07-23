@@ -1,0 +1,15 @@
+- name: copying {{COMPONENT}} repo
+  ansible.builtin.copy:
+    src: mysql.repo
+    dest: /etc/yum.repos.d/mysql.repo
+
+- name: Installing {{COMPONENT}}
+  ansible.builtin.package:
+    name: mysql-community-server
+    state: present
+
+- name: Starting {{COMPONENT}}
+  ansible.builtin.service:
+    name: mysqld
+    state: started
+    enabled: yes    
