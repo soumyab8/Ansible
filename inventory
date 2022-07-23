@@ -12,3 +12,6 @@ redis.b49.roboshop.internal
 
 [user]
 user.b49.roboshop.internal
+
+[cart]
+cart.b49.roboshop.internal
