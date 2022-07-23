@@ -8,9 +8,9 @@
      src: systemd.service  
      dest: /etc/systemd/system/{{COMPONENT}}.service
 
-- name: Starting {{}} 
+- name: Starting {{COMPONENT}} 
   ansible.builtin.service:
-    name: mongod
+    name: 
     state: started
     enabled: yes  
 
