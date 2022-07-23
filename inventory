@@ -3,3 +3,6 @@ frontend.b49.roboshop.internal
 
 [mongodb]
 mongodb.b49.roboshop.internal
+
+[catalogue]
+catalogue.b49.roboshop.internal

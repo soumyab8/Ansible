@@ -20,7 +20,23 @@
     state: started
     enabled: yes
 
+- name: Download and extracting {{COMPONENT}} repo
+  ansible.builtin.unarchive:
+    src: "{{REPO_URL}}"
+    dest: /tmp
+    remote_src: yes
+
+# - name: loading the catalogue schema
+#   community.mongodb.mongodb_shell:
+#     file: "/tmp/mongodb-main/catalogue.js"
+#     idempotent: yes
+
+# - name: loading the user schema
+#   community.mongodb.mongodb_shell:
+#     file: "/tmp/mongodb-main/user.js"
+#     idempotent: yes  
+
 - name: Disabling auto shutdown
-  shell: disable-auto-shutdown && set-hostname "{{COMPONENT}}"   
+  shell: disable-auto-shutdown && set-hostname {{COMPONENT}}
 
 
