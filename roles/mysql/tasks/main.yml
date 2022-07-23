@@ -27,3 +27,4 @@
 - name: Reset Password 
   debug: 
     msg: Resetting Password and the info is {{mysql_stat}}
+  when 
