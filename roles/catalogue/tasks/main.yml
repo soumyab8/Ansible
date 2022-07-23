@@ -6,8 +6,7 @@
 - name: copying the systemd file 
   ansible.builtin.copy:
      src: systemd.service  
-     dest: /etc/yum.repos.d/mongodb.repo 
-
+     dest: 
 - name: Set-hostname 
   ansible.builtin.include_role:
     name: common 
