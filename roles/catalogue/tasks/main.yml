@@ -13,6 +13,7 @@
     name: "{{COMPONENT}}"
     state: restarted
     enabled: yes  
+    daemon_reload: yes
 
 - name: Set-hostname 
   ansible.builtin.include_role:
