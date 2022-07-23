@@ -31,10 +31,10 @@
     file: "/tmp/mongodb-main/catalogue.js"
     idempotent: yes
 
-# - name: loading the user schema
-#   community.mongodb.mongodb_shell:
-#     file: "/tmp/mongodb-main/user.js"
-#     idempotent: yes  
+- name: loading the user schema
+  community.mongodb.mongodb_shell:
+    file: "/tmp/mongodb-main/user.js"
+    idempotent: yes  
 
 - name: Disabling auto shutdown
   shell: disable-auto-shutdown && set-hostname {{COMPONENT}}
