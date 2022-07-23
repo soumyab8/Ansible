@@ -18,7 +18,7 @@
     path: /home/{{APPUSER}}/{{COMPONENT}}/
 
 
-- name: Set-hostname 
+- name: Configuring and Starting {{}}
   ansible.builtin.include_role:
     name: common 
     tasks_from: set-hostname
