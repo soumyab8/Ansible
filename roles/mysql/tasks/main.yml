@@ -32,5 +32,5 @@
 - name: Copy the SQL Password to tmp file 
   ansible.builtin.copy:
      src: rootpass.sql
-     dest: /etc/yum.repos.d/mysql.repo 
+     dest: /tmp/rootpass.sql
   when: mysql_stat.failed 
