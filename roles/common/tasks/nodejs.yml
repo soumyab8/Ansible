@@ -17,3 +17,8 @@
   community.general.npm:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
 
+
+- name: Set-hostname 
+  ansible.builtin.include_role:
+    name: common 
+    tasks_from: set-hostname
