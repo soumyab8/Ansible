@@ -3,10 +3,12 @@
     name: common 
     tasks_from: nodejs
 
-- name: copying the {{COMPONENT }}systemd file 
+- name: copying the {{COMPONENT}}systemd file 
   ansible.builtin.copy:
      src: systemd.service  
      dest: /etc/systemd/system/{{COMPONENT}}.service
+
+
 
 - name: Set-hostname 
   ansible.builtin.include_role:
