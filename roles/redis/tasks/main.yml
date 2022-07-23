@@ -16,6 +16,6 @@
 
 - name: Starting {{COMPONENT}} 
   ansible.builtin.service:
-    name: mongod
+    name: "{{COMPONENT}}"
     state: started
     enabled: yes  
