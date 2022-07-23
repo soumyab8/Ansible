@@ -24,7 +24,5 @@
   ignore_errors: yes
   register: mysql_stat 
 
-- name: Reset Password 
-.failed    debug: 
-    msg: Resetting Password and the info is {{mysql_stat}}
-  when: mysql_stat
+- name: Rese
+  when: mysql_stat.failed  
