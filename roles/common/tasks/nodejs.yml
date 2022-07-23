@@ -8,15 +8,15 @@
       - gcc-c++
     state: present
 
-- name: Creating user {{APPUSER}}
-  ansible.builtin.include_role:
-    name: common
-    tasks_from: create-user
+# - name: Creating user {{APPUSER}}
+#   ansible.builtin.include_role:
+#     name: common
+#     tasks_from: create-user
 
-- name: Download and extracting {{COMPONENT}}
-  ansible.builtin.include_role:
-    name: common
-    tasks_from: download
+# - name: Download and extracting {{COMPONENT}}
+#   ansible.builtin.include_role:
+#     name: common
+#     tasks_from: download
 
 - name: Cleanup of {{COMPONENT}}
   ansible.builtin.include_role:
@@ -25,4 +25,14 @@
 
 - name: Install packages based on package.json
   community.general.npm:
-    path: /home/{{APPUSER}}/{{COMPONENT}}/    
+    path: /home/{{APPUSER}}/{{COMPONENT}}/
+
+- name: Configuring and starting {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: systemd
+
+- name: set the hostname
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: system-hostname         
