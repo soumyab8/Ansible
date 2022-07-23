@@ -1,5 +1,6 @@
 - name: Playbook to setup the roboshop project
-  hosts: frontend
+  hosts: mongodb
   become: yes
   roles:
-    - frontend
+   # - frontend
+    - mongodb
