@@ -10,7 +10,7 @@
 
 - name: Starting {{COMPONENT}} 
   ansible.builtin.service:
-    name: 
+    name: "{{COMPONENT}}"
     state: started
     enabled: yes  
 
