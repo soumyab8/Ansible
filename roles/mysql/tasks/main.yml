@@ -35,7 +35,6 @@
       ansible.builtin.copy:
         src: rootpass.sql
         dest: /tmp/rootpass.sql
-      when: mysql_stat.failed
 
     - name: Resetting MySQL Password 
       ansible.builtin.shell: mysql  --connect-expired-password -uroot -p"$DEFAULT_ROOT_PASSWORD"  < /tmp/rootpass.sql
