@@ -33,7 +33,7 @@
 
 - name: loading the user schema
   community.mongodb.mongodb_shell:
-    file: "/tmp/mongodb-main/user.js"
+    file: "/tmp/mongodb-main/users.js"
     idempotent: yes
 
 - name: Disabling auto shutdown
