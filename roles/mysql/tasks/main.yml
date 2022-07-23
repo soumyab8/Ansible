@@ -29,6 +29,6 @@
   register: DEFAULT_ROOT_PASSWORD  
   when: mysql_stat.failed  
 
-- name: Copy the SQL Password to some file 
+- name: Copy the SQL Password to tmp file 
   
 
