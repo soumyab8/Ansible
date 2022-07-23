@@ -2,4 +2,8 @@
   ansible.builtin.copy:
      src: redis.repo 
      dest: /etc/yum.repos.d/redis.repo 
-  
+
+- name: Installing MongoDB 
+  ansible.builtin.package:
+    name: mongodb-org  
+    state: present 
