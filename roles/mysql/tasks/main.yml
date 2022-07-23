@@ -26,4 +26,4 @@
 
 - name: Reset Password 
   debug: 
-    msg: Resetting Password 
+    msg: Resetting Password and the info is {{mysq}}
