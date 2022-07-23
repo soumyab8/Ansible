@@ -33,4 +33,6 @@
   ansible.builtin.copy:
      src: rootpass.sql
      dest: /tmp/rootpass.sql
-  when: mysql_stat.failed 
+  when: mysql_stat.failed
+
+ 
