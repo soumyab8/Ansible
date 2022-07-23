@@ -1,1 +1,1 @@
-mysql  --connect-expired-password -uroot -p"$DEFAULT_ROOT_PASSWORD"  < /tmp/rootpassword_change.sql
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('RoboShop@1');
