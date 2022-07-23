@@ -25,6 +25,6 @@
   register: mysql_stat 
 
 - name: Reset Password 
-  debug: 
+.failed    debug: 
     msg: Resetting Password and the info is {{mysql_stat}}
-  when: mysql_stat.failed  
+  when: mysql_stat
