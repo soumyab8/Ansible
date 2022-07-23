@@ -10,6 +10,6 @@
 
 - name: Starting {{COMPONENT}} 
   ansible.builtin.service:
-    name: mongod
+    name: mysqld
     state: started
     enabled: yes  
