@@ -8,4 +8,4 @@ mongodb.roboshop.internal
 catalogue.roboshop.internal
 
 [redis]
-catalogue.roboshop.internal
+redis.roboshop.internal
