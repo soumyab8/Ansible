@@ -8,7 +8,7 @@
     name: redis-6.2.7
     state: present  
 
-- name: Updating MongoDB Listening Config 
+- name: Updating 127.0.0.1 to 0.0.0.0 
   ansible.builtin.replace:
     path: /etc/mongod.conf
     regexp: '127.0.0.1'
