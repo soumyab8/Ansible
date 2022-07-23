@@ -3,7 +3,3 @@
     name: common 
     tasks_from: nodejs
 
-- name: Set-hostname 
-  ansible.builtin.include_role:
-    name: common 
-    tasks_from: set-hostname
