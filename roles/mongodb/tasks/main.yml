@@ -20,11 +20,10 @@
     state: started
     enabled: yes
 
-- name: Download and extracting {{COMPONENT}} repo
-  ansible.builtin.unarchive:
-    src: "{{REPO_URL}}"
-    dest: /tmp
-    remote_src: yes
+- name: Download and extracting {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download
 
 - name: loading the catalogue and user schema
   community.mongodb.mongodb_shell:
