@@ -5,5 +5,5 @@
 
 - name: Installing {{COMPONENT}} 
   ansible.builtin.package:
-    name: mongodb-org  
+    name: redis-6.2.7
     state: present 
