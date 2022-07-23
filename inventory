@@ -6,3 +6,6 @@ mongodb.b49.roboshop.internal
 
 [catalogue]
 catalogue.b49.roboshop.internal
+
+[redis]
+redis.b49.roboshop.internal
