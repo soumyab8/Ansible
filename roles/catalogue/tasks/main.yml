@@ -3,18 +3,6 @@
     name: common 
     tasks_from: nodejs
 
-- name: copying the {{COMPONENT}} systemd file 
-  ansible.builtin.copy:
-     src: systemd.service  
-     dest: /etc/systemd/system/{{COMPONENT}}.service
-
-- name: Starting {{COMPONENT}} 
-  ansible.builtin.service:
-    name: "{{COMPONENT}}"
-    state: restarted
-    enabled: yes  
-    daemon_reload: yes
-
 - name: Set-hostname 
   ansible.builtin.include_role:
     name: common 
