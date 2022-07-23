@@ -9,6 +9,7 @@
        - mysql-community-server
        - MySQL-python
     state: present 
+# We are installing MySQL-python as the tas ""
 
 - name: Starting {{COMPONENT}} 
   ansible.builtin.service:
