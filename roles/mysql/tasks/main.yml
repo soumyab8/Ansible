@@ -36,5 +36,5 @@
   when: mysql_stat.failed
 
 - name: Resetting MySQL Password 
-  ansible.builtin.shell: grep "temporary password" /var/log/mysqld.log | awk '{print $NF}'
+  ansible.builtin.shell: mysql  --connect-expired-password -uroot -p"$DEFAULT_ROOT_PASSWORD"  < /tmp/rootpassword_change.sql
   when: mysql_stat.failed  
