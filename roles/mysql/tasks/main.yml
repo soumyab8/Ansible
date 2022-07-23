@@ -9,7 +9,7 @@
        - mysql-community-server
        - MySQL-python
     state: present 
-# We are installing MySQL-python as the tas ""
+# We are installing MySQL-python as the task "Check the DB Password " needs that as per the error.
 
 - name: Starting {{COMPONENT}} 
   ansible.builtin.service:
