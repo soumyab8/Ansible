@@ -51,3 +51,4 @@
 - name: Uninstall Password Validate Plugin  
   when:
    
+ ||  
