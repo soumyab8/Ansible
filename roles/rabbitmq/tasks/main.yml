@@ -3,5 +3,6 @@
 
 - name: Installing {{COMPONENT}} 
   ansible.builtin.package:
-    name: maven 
+    name: rabbitmq-server  
     state: present 
+
