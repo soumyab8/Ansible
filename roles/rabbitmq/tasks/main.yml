@@ -1,7 +1,7 @@
 - name: Configure yum repos
   ansible.builtin.shell: curl -s {{RABBITMQ_URL}} | sudo bash
 
-- name: Installing Erland and {{COMPONENT}}
+- name: Installing Erlang and {{COMPONENT}}
   ansible.builtin.package:
     name:
       - "{{ERLANG_URL}}"
@@ -24,7 +24,7 @@
     configure_priv: .*
     read_priv: .*
     write_priv: .*
-    state: present        
+    state: present
 
 
 
