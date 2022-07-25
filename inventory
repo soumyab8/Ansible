@@ -24,3 +24,6 @@ shipping.b49.roboshop.internal
 
 [rabbitmq]
 rabbitmq.b49.roboshop.internal
+
+[payment]
+payment.b49.roboshop.internal

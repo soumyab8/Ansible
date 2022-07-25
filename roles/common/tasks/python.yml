@@ -1,0 +1,37 @@
+-  name: Installing {{COMPONENT}}
+   ansible.builtin.package:
+    name:
+      - python36
+      - gcc-c++
+      - python3-devel
+    state: present
+
+- name: Creating user {{APPUSER}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: create-user
+
+- name: Download and extracting {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download
+
+- name: Cleanup of {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: cleanup
+
+- name: Installing dependencies
+  ansible.builtin.pip:
+    requirements: /home/{{APPUSER}}/{{COMPONENT}}/requirements.txt
+    executable: pip3
+
+# - name: Configuring and starting {{COMPONENT}}
+#   ansible.builtin.include_role:
+#     name: common
+#     tasks_from: systemd
+
+# - name: set the hostname
+#   ansible.builtin.include_role:
+#     name: common
+#     tasks_from: set-hostname
