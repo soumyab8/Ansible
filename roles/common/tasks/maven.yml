@@ -1,6 +1,4 @@
 - name: Installing Maven 
   ansible.builtin.package:
-    name: 
-      - nodejs
-      - gcc-c++ 
+    name: maven 
     state: present 
