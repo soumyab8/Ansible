@@ -13,7 +13,7 @@
     enabled: yes  
     daemon_reload: yes
 
-- name: Adding 
+- name: Adding {{COMPONENT}} applicaiton user 
   community.rabbitmq.rabbitmq_user:
     user: joe
     password: changeme
