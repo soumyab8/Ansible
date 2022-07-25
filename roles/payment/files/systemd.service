@@ -1,12 +1,18 @@
 [Unit]
-Description=Shipping Service
+Description=Payment Service
 
 [Service]
-User=roboshop
-Environment=CART_ENDPOINT=cart.roboshop.internal:8080
-Environment=DB_HOST=mysql.roboshop.internal
-ExecStart=/bin/java -jar /home/roboshop/shipping/shipping.jar
-SyslogIdentifier=shipping
+User=root
+WorkingDirectory=/home/roboshop/payment
+
+Environment=CART_HOST=CARTHOST
+Environment=USER_HOST=USERHOST
+Environment=AMQP_HOST=AMQPHOST
+Environment=AMQP_USER=roboshop
+Environment=AMQP_PASS=roboshop123
+
+ExecStart=/usr/local/bin/uwsgi --ini payment.ini
+SyslogIdentifier=payment
 
 [Install]
 WantedBy=multi-user.target
