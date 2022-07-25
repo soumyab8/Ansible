@@ -1,2 +1,7 @@
 - name: Configuring the Yum Repos 
   ansible.builtin.shell: yum install {{ERLANG_URL}} -y && curl -s {{RABBITMQ_URL}} | sudo bash 
+
+- name: Installing Maven 
+  ansible.builtin.package:
+    name: maven 
+    state: present 
