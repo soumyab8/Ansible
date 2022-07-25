@@ -57,5 +57,5 @@
         dest: /tmp/password-validate.sql 
         
     - name: Uninstall the plugin 
-    
+      ansible.builtin.shell: 
       
