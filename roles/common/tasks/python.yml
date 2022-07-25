@@ -1,10 +1,10 @@
 - name: Installing {{COMPONENT}}
   ansible.builtin.package:
     name: 
-      - nodejs
+      - python36
       - gcc-c++ 
     state: present 
-
+python36 gcc python3-devel
 - name: App user {{APPUSER}} User Creation
   ansible.builtin.include_role:
     name: common
