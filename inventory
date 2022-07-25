@@ -21,3 +21,6 @@ mysql.b49.roboshop.internal
 
 [shipping]
 shipping.b49.roboshop.internal
+
+[rabbitmq]
+rabbitmq.b49.roboshop.internal
