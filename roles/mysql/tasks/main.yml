@@ -64,9 +64,7 @@
     name: common 
     tasks_from: download 
 
-- name: >
-    Import dump.sql with specific latin1 encoding,
-    similar to mysql -u <username> --default-character-set=latin1 -p <password> < dump.sql
+- name: Load Schema 
   community.mysql.mysql_db:
     state: import
     name: all
