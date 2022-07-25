@@ -26,4 +26,4 @@ shipping.roboshop.internal
 rabbitmq.roboshop.internal
 
 [payment]
-rabbitmq.roboshop.internal
+payment.roboshop.internal
