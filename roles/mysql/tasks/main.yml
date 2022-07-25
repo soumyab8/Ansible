@@ -50,4 +50,8 @@
 
 - name: Uninstall Password Validate Plugin  
   when: PLUG_INFO.rc == 0 
-  
+  block:
+    - name: Copy the SQL Password to tmp file 
+      ansible.builtin.copy:
+        src: rootpass.sql
+        dest: /tmp/rootpass.sql
