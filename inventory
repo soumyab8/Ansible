@@ -27,3 +27,6 @@ rabbitmq.roboshop.internal
 
 [payment]
 payment.roboshop.internal
+
+
+ansible-pull 
