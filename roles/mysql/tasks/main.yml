@@ -56,5 +56,6 @@
         src: password-validate.sql
         dest: /tmp/password-validate.sql 
         
-    - name:
+    - name: Uninstall the plugin 
+    
       
