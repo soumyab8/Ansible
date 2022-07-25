@@ -6,3 +6,9 @@
     name: rabbitmq-server  
     state: present 
 
+- name: Starting {{COMPONENT}} 
+  ansible.builtin.service:
+    name: 
+    state: restarted
+    enabled: yes  
+    daemon_reload: yes
