@@ -27,7 +27,7 @@
     executable: pip3
 
 - name: Registering {{APPUSER}} uid and gid
-  ansible.builin.shell: id {{APPUSER}}
+  ansible.builtin.shell: id {{APPUSER}}
   register: APPUSER_REGISTER
 
 - name: priniting APPUSER output
