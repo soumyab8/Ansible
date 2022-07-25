@@ -32,6 +32,7 @@
 
 - name: save data to variable
   set_fact:
+    args:
       json_data: "{{APPUSER_REGISTER.stdout | from_json}}"
 
 # - name: printing APPUSER output
