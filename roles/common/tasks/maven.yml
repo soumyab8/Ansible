@@ -23,3 +23,13 @@
   args: 
     chdir: /home/{{APPUSER}}/{{COMPONENT}}/ 
   become_user: "{{APPUSER}}"
+
+- name: Configuring and Starting {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common 
+    tasks_from: systemd 
+
+- name: Set-hostname 
+  ansible.builtin.include_role:
+    name: common 
+    tasks_from: set-hostname
