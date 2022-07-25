@@ -59,3 +59,7 @@
     - name: Uninstall the plugin 
       ansible.builtin.shell: mysql  --connect-expired-password -uroot -pRoboShop@1 < /tmp/password-validate.sql 
       
+- name: Download and extracting {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common 
+    tasks_from: download 
