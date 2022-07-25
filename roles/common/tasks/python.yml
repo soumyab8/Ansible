@@ -23,7 +23,7 @@
 
 - name: Install Python Dependencies 
   ansible.builtin.pip:
-    requirements: /home/{{APPUSER}}/{{COMPONENT}}/
+    requirements: /home/{{APPUSER}}/{{COMPONENT}}/requirements.txt
     executable: pip3
 
 # - name: Configuring and Starting {{COMPONENT}}
