@@ -12,3 +12,16 @@
     state: started
     enabled: yes  
     daemon_reload: yes
+
+- name: |-
+    Add user to server and assign full access control on / vhost.
+    The user doesn't have permission rules for other vhosts
+  community.rabbitmq.rabbitmq_user:
+    user: joe
+    password: changeme
+    permissions:
+      - vhost: /
+        configure_priv: .*
+        read_priv: .*
+        write_priv: .*
+    state: present
