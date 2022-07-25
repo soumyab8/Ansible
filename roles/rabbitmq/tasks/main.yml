@@ -4,8 +4,9 @@
 - name: Installing Errlang and {{COMPONENT}} 
   ansible.builtin.package:
     name: 
-      - rabbitmq-server  
-      - yum install {{ERLANG_URL}}"
+      -   
+      - {{ERLANG_URL}}"
+      
     state: present 
 
 - name: Starting {{COMPONENT}} 
