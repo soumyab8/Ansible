@@ -35,11 +35,15 @@
       ansible.builtin.shell: grep "temporary password" /var/log/mysqld.log | awk '{print $NF}'
       register: DEFAULT_ROOT_PASSWORD
 
-    - name: Copy the sql password to tmp file
-      ansible.builtin.copy:
-        src: rootpass.sql
-        dest: /tmp/rootpass.sql
+    - name: print the password
+      debug:
+        msg: "{{DEFAULT_ROOT_PASSWORD}}"  
 
-    - name: Restting Mysql password
-      ansible.builtin.shell: mysql  --connect-expired-password -uroot -p"$DEFAULT_ROOT_PASSWORD"  < /tmp/rootpassword_change.sql
+    # - name: Copy the sql password to tmp file
+    #   ansible.builtin.copy:
+    #     src: rootpass.sql
+    #     dest: /tmp/rootpass.sql
+
+    # - name: Restting Mysql password
+    #   ansible.builtin.shell: mysql  --connect-expired-password -uroot -p"$DEFAULT_ROOT_PASSWORD"  < /tmp/rootpass.sql
 
