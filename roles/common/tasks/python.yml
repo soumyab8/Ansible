@@ -26,6 +26,8 @@
     requirements: /home/{{APPUSER}}/{{COMPONENT}}/requirements.txt
     executable: pip3
 
+
+
 # - name: Configuring and Starting {{COMPONENT}}
 #   ansible.builtin.include_role:
 #     name: common 
