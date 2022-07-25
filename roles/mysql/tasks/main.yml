@@ -52,9 +52,18 @@
   register: PLUG_INFO
   ignore_errors: yes
 
-- name: Printing the password
-  debug:
-    msg: "{{PLUG_INFO}}"    
+# - name: Printing the password
+#   debug:
+#     msg: "{{PLUG_INFO}}"    
 
-#- name: Uninstall password validate plugin
+- name: Uninstall password validate plugin
+  when: PLUG_INFO.rc == 0
+  block:
+    - name: Copy the password validate to tmp file
+      ansible.builtin.copy:
+        src: password-validate.sql
+        dest: /tmp/password-validate.sql
+
+    - name: Uninstall the plugin
+      ansible.builtin.shell: mysql  --connect-expired-password -uroot -pRoboShop@1  < /tmp/password-validate.sql    
 
