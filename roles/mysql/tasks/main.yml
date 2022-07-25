@@ -35,10 +35,10 @@
       debug:
         msg: "{{DEFAULT_ROOT_PASSWORD}}" 
 
-    - name: Copy the SQL Password to tmp file 
-      ansible.builtin.copy:
-        src: rootpass.sql
-        dest: /tmp/rootpass.sql
+    # - name: Copy the SQL Password to tmp file 
+    #   ansible.builtin.copy:
+    #     src: rootpass.sql
+    #     dest: /tmp/rootpass.sql
 
-    - name: Resetting MySQL Password 
-      ansible.builtin.shell: mysql  --connect-expired-password -uroot -p{{$DEFAULT_ROOT_PASSWORD}}"  < /tmp/rootpass.sql
+    # - name: Resetting MySQL Password 
+    #   ansible.builtin.shell: mysql  --connect-expired-password -uroot -p{{$DEFAULT_ROOT_PASSWORD}}"  < /tmp/rootpass.sql
