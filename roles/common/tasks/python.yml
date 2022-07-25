@@ -27,7 +27,8 @@
     executable: pip3
 
 - name: Registering the {{APPUSER}} uid and gid 
-  ansible.builtin.shell: id {{APPUSER}}
+  ansible.builtin.shell: id {{APPUSER}} 
+  register: 
 
 # - name: Configuring and Starting {{COMPONENT}}
 #   ansible.builtin.include_role:
