@@ -70,4 +70,4 @@
     name: all
     login_user: root 
     login_password: RoboShop@1
-    target: /tmp/dump.sql
+    target: /tmp/mysql-main/
