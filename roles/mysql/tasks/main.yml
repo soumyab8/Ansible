@@ -49,9 +49,6 @@
   ignore_errors: yes 
 
 
-- name: printing the password 
-  debug:
-      msg: "{{PLUG_INFO}}" 
 
 # - name: Uninstall Password Validate Plugin  
    
