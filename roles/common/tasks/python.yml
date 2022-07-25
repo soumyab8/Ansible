@@ -21,10 +21,18 @@
     name: common
     tasks_from: cleanup
 
-- name: Installing dependencies
+- name: Installing python dependencies
   ansible.builtin.pip:
     requirements: /home/{{APPUSER}}/{{COMPONENT}}/requirements.txt
     executable: pip3
+
+- name: Registering {{APPUSER}} uid and gid
+  ansible.builin.shell: id {{APPUSER}}
+  register: APPUSER_REGISTER
+
+- name: priniting APPUSER output
+  debug:
+    msg: "{{APPUSER_REGISTER}}"      
 
 # - name: Configuring and starting {{COMPONENT}}
 #   ansible.builtin.include_role:
