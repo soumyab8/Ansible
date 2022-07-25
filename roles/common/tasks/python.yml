@@ -32,7 +32,7 @@
 
 - name: Printing the APPUSER output 
   debug:
-    msg: "{{APPUSER_REGISTER}}"
+    msg: "{{APPUSER_REGISTER.uid}}"
 
 # - name: Configuring and Starting {{COMPONENT}}
 #   ansible.builtin.include_role:
