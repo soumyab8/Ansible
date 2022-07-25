@@ -19,4 +19,4 @@
     tasks_from: cleanup
 
 - name: Generating the articact 
-  
+  ansible.builtin.shelll:
