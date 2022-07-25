@@ -16,7 +16,7 @@
 - name: Adding {{COMPONENT}} applicaiton user 
   community.rabbitmq.rabbitmq_user:
     user: {{APPUSER}}
-    password: changeme
+    password: 
     permissions:
       - vhost: /
         configure_priv: .*
