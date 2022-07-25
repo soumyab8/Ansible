@@ -18,3 +18,4 @@
     name: common
     tasks_from: cleanup
 
+- name: Generating the artica
