@@ -33,7 +33,7 @@
 
     - name: printing the password 
       debug:
-        msg: "" 
+        msg: "{{DEFAULT_ROOT_PASSWORD}}" 
 
     - name: Copy the SQL Password to tmp file 
       ansible.builtin.copy:
