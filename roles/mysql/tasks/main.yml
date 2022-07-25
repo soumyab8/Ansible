@@ -49,8 +49,8 @@
   ignore_errors: yes 
 
 
-    - name: printing the password 
-      debug:
+- name: printing the password 
+    debug:
         msg: "{{DEFAULT_ROOT_PASSWORD}}" 
 
 # - name: Uninstall Password Validate Plugin  
