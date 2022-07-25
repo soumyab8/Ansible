@@ -3,9 +3,9 @@
     name: 
       - python36
       - gcc-c++  
-      
+      - python3-devel
     state: present 
-python36 gcc python3-devel
+
 - name: App user {{APPUSER}} User Creation
   ansible.builtin.include_role:
     name: common
