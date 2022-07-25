@@ -1,0 +1,24 @@
+- name: Installing {{COMPONENT}}
+  ansible.builtin.package:
+    name: maven
+    state: present
+
+- name: Creating user {{APPUSER}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: create-user
+
+- name: Download and extracting {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download    
+
+- name: Cleanup of {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: cleanup
+
+- name: Generating the Artifact
+  ansible.builtin.shell: mvn clean package && mv target/shipping-1.0.jar shipping.jar
+  chdir: /home/{{APPUSER}}/{{COMPONENT}}/
+  become_user: "{{APPUSER}}"
