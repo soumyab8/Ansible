@@ -30,9 +30,13 @@
   ansible.builtin.shell: id {{APPUSER}}
   register: APPUSER_REGISTER
 
-- name: printing APPUSER output
-  debug:
-    msg: "{{APPUSER_REGISTER.stdout.uid}}"     
+- name: save data to variable
+  set_fact:
+      json_data: "{{APPUSER_REGISTER.stdout | from_json}}"
+
+# - name: printing APPUSER output
+#   debug:
+#     msg: "{{APPUSER_REGISTER.stdout.uid}}"     
 
 # - name: Configuring and starting {{COMPONENT}}
 #   ansible.builtin.include_role:
