@@ -49,6 +49,4 @@
   ignore_errors: yes 
 
 - name: Uninstall Password Validate Plugin  
-  when:
-   
- ||  
+  when: 
