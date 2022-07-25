@@ -31,8 +31,8 @@
   register: APPUSER_REGISTER
 
 - name: save data to variable
-  set_fact:
-      json_data: "{{ (APPUSER_REGISTER['stdout'] | from_json)['msg'] }}"
+  debug:
+    msg: "{{ (APPUSER_REGISTER['msg'] | json_query(stdout.uid)}}"
 
 # - name: printing APPUSER output
 #   debug:
