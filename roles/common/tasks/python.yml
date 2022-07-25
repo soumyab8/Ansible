@@ -30,11 +30,8 @@
   ansible.builtin.shell: id {{APPUSER}}
   register: APPUSER_REGISTER
 
-- name: ReadJsonfile
-  hosts: localhost
-  tasks:
-    - name: save data to variable
-      set_fact:
+- name: save data to variable
+  set_fact:
       json_data: "{{APPUSER_REGISTER.stdout | from_json}}"
 
 # - name: printing APPUSER output
