@@ -18,11 +18,11 @@
     user: "{{APPUSER}}"
     password: roboshop123
     permissions:
-      - vhosts: /
-        configure_priv: .*
-        read_priv: .*
-        write_priv: .*
-        state: present        
+    vhosts: /
+    configure_priv: .*
+    read_priv: .*
+    write_priv: .*
+    state: present        
 
 
 
