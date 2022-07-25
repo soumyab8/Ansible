@@ -54,4 +54,5 @@
     - name: Copy the SQL Password to tmp file 
       ansible.builtin.copy:
         src: password-validate.sql
-        dest: /tmp/rootpass.sql
+        dest: /tmp/password-validate.sql 
+      
