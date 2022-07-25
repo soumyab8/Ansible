@@ -65,5 +65,19 @@
         dest: /tmp/password-validate.sql
 
     - name: Uninstall the plugin
-      ansible.builtin.shell: mysql  --connect-expired-password -uroot -pRoboShop@1  < /tmp/password-validate.sql    
+      ansible.builtin.shell: mysql  --connect-expired-password -uroot -pRoboShop@1  < /tmp/password-validate.sql
+
+- name: Download and extracting {{COMPONENT}} schema
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download
+
+- name: Loading the schema
+  community.mysql.mysql_db:
+    state: import
+    name: all
+    login_user: root
+    login_password: RoboShop@1
+    taget: /tmp/mysql-main/shipping.sql 
+
 
