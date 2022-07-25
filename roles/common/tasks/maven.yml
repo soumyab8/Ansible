@@ -1,4 +1,4 @@
-- name: Installing {{COMPONENT}}
+- name: Installing Maven 
   ansible.builtin.package:
     name: 
       - nodejs
