@@ -23,7 +23,7 @@
 
 - name: Install Python Dependencies 
   ansible.builtin.pip:
-    requirements: /my_app/requirements.txt
+    requirements: /home/
     virtualenv: /my_app/venv
 
 # - name: Configuring and Starting {{COMPONENT}}
