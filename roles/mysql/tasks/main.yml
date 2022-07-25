@@ -68,5 +68,5 @@
   community.mysql.mysql_db:
     state: import
     name: all
-    encoding: latin1
+
     target: /tmp/dump.sql
