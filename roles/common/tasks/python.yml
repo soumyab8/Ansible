@@ -32,7 +32,7 @@
 
 - name: save data to variable
   debug:
-    msg: "{{(APPUSER_REGISTER['msg'] | json_query(stdout.uid)}}"
+    msg: "{{APPUSER_REGISTER['msg'] | json_query('stdout.uid')}}"
 
 # - name: printing APPUSER output
 #   debug:
