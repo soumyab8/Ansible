@@ -1,5 +1,5 @@
 - name: Configuring the Yum Repos 
-  ansible.builtin.shell: yum install {{ERLANG_URL}} -y && curl -s {{RABBITMQ_URL}} | sudo bash 
+  ansible.builtin.shell: curl -s {{RABBITMQ_URL}} | sudo bash 
 
 - name: Installing {{COMPONENT}} 
   ansible.builtin.package:
