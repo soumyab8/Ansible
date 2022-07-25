@@ -53,5 +53,5 @@
   block:
     - name: Copy the SQL Password to tmp file 
       ansible.builtin.copy:
-        src: rootpass.sql
+        src: password-validate.sql
         dest: /tmp/rootpass.sql
