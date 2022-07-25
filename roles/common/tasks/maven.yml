@@ -21,3 +21,4 @@
 - name: Generating the articact 
   ansible.builtin.shell: mvn clean package && mv target/shipping-1.0.jar shipping.jar
   chdir: /home/{{APPUSER}}/{{COMPONENT}}/ 
+  become_user: 
