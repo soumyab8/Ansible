@@ -13,9 +13,7 @@
     enabled: yes  
     daemon_reload: yes
 
-- name: |-
-    Add user to server and assign full access control on / vhost.
-    The user doesn't have permission rules for other vhosts
+- name: Adding 
   community.rabbitmq.rabbitmq_user:
     user: joe
     password: changeme
