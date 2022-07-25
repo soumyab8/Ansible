@@ -4,7 +4,7 @@
 - name: Installing Errlang and {{COMPONENT}} 
   ansible.builtin.package:
     name:  
-      - {{ERLANG_URL}}"
+      - "{{ERLANG_URL}}"
       - rabbitmq-server
     state: present 
 
