@@ -19,7 +19,6 @@
   community.rabbitmq.rabbitmq_user:
     user: "{{APPUSER}}"
     password: roboshop123
-    permissions:
     vhost: /
     configure_priv: .*
     read_priv: .*
