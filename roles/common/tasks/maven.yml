@@ -2,3 +2,8 @@
   ansible.builtin.package:
     name: maven 
     state: present 
+
+- name: App user {{APPUSER}} User Creation
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: create-user
