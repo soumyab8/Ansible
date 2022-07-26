@@ -32,7 +32,7 @@
 
 - name: Update uid in APP Config 
   ansible.builtin.lineinfile:
-    path: /etc/selinux/config
+    path: /home/{{APPUSER}}/{{}}
     regexp: '^SELINUX='
     line: SELINUX=enforcing
 
