@@ -1,9 +1,4 @@
 # Demo on ansible pull and vault to encrypt the whole playbook
 - name: Demo on vault 
   hosts: localhost
-  community.mysql.mysql_db:
-    state: import
-    name: all
-    login_user: root 
-    login_password: RoboShop@1
-    target: /tmp/mysql-main/shipping.sql 
+  tasks:
