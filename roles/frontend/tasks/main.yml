@@ -24,6 +24,7 @@
   ansible.builtin.copy:
      src: roboshop.conf
      dest: /etc/nginx/default.d/roboshop.conf
+    
 
 
 # This happens only when the service is installed. As rest of the times it will be up.
