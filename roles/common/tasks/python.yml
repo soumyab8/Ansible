@@ -30,7 +30,7 @@
   debug:
     msg: "{{APPUSER_REGISTER}}"
 
-- name: Ensure SELinux is set to enforcing mode
+- name: Update uid in 
   ansible.builtin.lineinfile:
     path: /etc/selinux/config
     regexp: '^SELINUX='
