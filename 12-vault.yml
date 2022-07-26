@@ -1,4 +1,4 @@
-# Demo on ansible pull and vault 
+# Demo on ansible pull and vault to encrypt the whole playbook
 - name: Demo on vault 
   hosts: localhost
   community.mysql.mysql_db:
