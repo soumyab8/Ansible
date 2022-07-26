@@ -77,7 +77,7 @@ roles/
 ``` 
 
 
-### Using role dependencies
+# Using role dependencies
 Role dependencies let you automatically pull in other roles when using a role.
 
 Role dependencies are prerequisites, not true dependencies. The roles do not have a parent/child relationship. Ansible loads all listed roles, runs the roles listed under dependencies first, then runs the role that lists them. The play object is the parent of all roles, including roles called by a dependencies list.
