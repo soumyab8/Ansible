@@ -34,7 +34,7 @@
   ansible.builtin.lineinfile:
     path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
     regexp: '^uid'
-    line: uid 
+    line: uid = {{APPUSE}}
 
 # - name: Configuring and Starting {{COMPONENT}}
 #   ansible.builtin.include_role:
