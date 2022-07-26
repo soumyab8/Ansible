@@ -27,6 +27,12 @@
 
 
 
+- name: Start Nginx  
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+    enabled: yes 
+
 - name: Set-hostname 
   ansible.builtin.include_role:
     name: common 
