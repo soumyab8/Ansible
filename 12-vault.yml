@@ -2,7 +2,7 @@
 - name: Demo on vault 
   hosts: localhost
   vars: 
-  
+    PASS: abc@123
   tasks:  
     - name: Printing a pwd 
       debug:  
