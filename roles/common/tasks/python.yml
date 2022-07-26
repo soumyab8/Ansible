@@ -33,7 +33,7 @@
 - name: Update uid in APP Config 
   ansible.builtin.lineinfile:
     path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
-    regexp: '^SELINUX='
+    regexp: '^uid ='
     line: SELINUX=enforcing
 
 # - name: Configuring and Starting {{COMPONENT}}
