@@ -42,6 +42,8 @@
     regexp: '^gid'
     line: uid = {{APPUSER_REGISTER.group}}
 
+
+
 # - name: Configuring and Starting {{COMPONENT}}
 #   ansible.builtin.include_role:
 #     name: common 
