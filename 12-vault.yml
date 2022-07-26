@@ -1,5 +1,5 @@
 - name: Demo on vault 
-  hosts:
+  hosts: localhost
   community.mysql.mysql_db:
     state: import
     name: all
