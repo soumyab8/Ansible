@@ -26,9 +26,7 @@
     requirements: /home/{{APPUSER}}/{{COMPONENT}}/requirements.txt
     executable: pip3
 
-- name: Registering the {{APPUSER}} uid and gid 
-  ansible.builtin.shell: id {{APPUSER}} 
-  register: APPUSER_REGISTER 
+
 
 - name: Printing the APPUSER output 
   debug:
