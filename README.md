@@ -85,6 +85,7 @@ Role dependencies are prerequisites, not true dependencies. The roles do not hav
 Role dependencies are stored in the meta/main.yml file within the role directory. This file should contain a list of roles and parameters to insert before the specified role. For example:
 
 # roles/myapp/meta/main.yml
+```
 ---
 dependencies:
   - role: common
@@ -98,3 +99,5 @@ dependencies:
       dbname: blarg
       other_parameter: 12
 Ansible always executes roles listed in dependencies before the role that lists them. Ansible executes this pattern recursively when you use the roles keyword. For example, if you list role foo under roles:, role foo lists role bar under dependencies in its meta/main.yml file, and role bar lists role baz under dependencies in its meta/main.yml, Ansible executes baz, then bar, then foo
+
+``` 
