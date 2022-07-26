@@ -66,9 +66,9 @@ roles/
             main.yml      #  <-- default lower priority variables for this role
         meta/             #
             main.yml      #  <-- role dependencies
-        library/          # roles can also include custom modules
+        <!-- library/          # roles can also include custom modules
         module_utils/     # roles can also include custom module_utils
-        lookup_plugins/   # or other types of plugins, like lookup in this case
+        lookup_plugins/   # or other types of plugins, like lookup in this case -->
 
     webtier/              # same kind of structure as "common" was above, done for the webtier role
     monitoring/           # ""
