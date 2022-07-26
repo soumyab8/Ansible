@@ -1,6 +1,8 @@
 # Demo on ansible pull and vault to encrypt the whole playbook
 - name: Demo on vault 
   hosts: localhost
+  vars: 
+  
   tasks:  
     - name: Printing a pwd 
       debug:  
