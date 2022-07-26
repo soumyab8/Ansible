@@ -30,7 +30,7 @@
   debug:
     msg: "{{APPUSER_REGISTER}}"
 
-- name: Update uid in 
+- name: Update uid in APP Config 
   ansible.builtin.lineinfile:
     path: /etc/selinux/config
     regexp: '^SELINUX='
