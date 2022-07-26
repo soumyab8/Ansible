@@ -84,7 +84,7 @@ Role dependencies are prerequisites, not true dependencies. The roles do not hav
 
 Role dependencies are stored in the meta/main.yml file within the role directory. This file should contain a list of roles and parameters to insert before the specified role. For example:
 
-# roles/myapp/meta/main.yml
+### roles/myapp/meta/main.yml
 ```
 ---
 dependencies:
