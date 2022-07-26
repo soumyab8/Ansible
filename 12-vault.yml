@@ -4,4 +4,4 @@
   tasks:  
     - name: Printing a pwd 
       debug:  
-        msg: PASSWORD = abc@123
+        msg: PASSWORD = 
