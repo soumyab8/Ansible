@@ -26,11 +26,11 @@
      dest: /etc/nginx/default.d/roboshop.conf
 
 
-
+# This happens only when the service is installed. As rest of the times it will be up.
 - name: Start Nginx  
   ansible.builtin.service:
     name: nginx
-    state: restarted
+    state: started
     enabled: yes 
 
 - name: Set-hostname 
