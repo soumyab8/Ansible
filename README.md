@@ -75,3 +75,26 @@ roles/
     fooapp/               # ""
 
 ``` 
+
+
+### Using role dependencies
+Role dependencies let you automatically pull in other roles when using a role.
+
+Role dependencies are prerequisites, not true dependencies. The roles do not have a parent/child relationship. Ansible loads all listed roles, runs the roles listed under dependencies first, then runs the role that lists them. The play object is the parent of all roles, including roles called by a dependencies list.
+
+Role dependencies are stored in the meta/main.yml file within the role directory. This file should contain a list of roles and parameters to insert before the specified role. For example:
+
+# roles/myapp/meta/main.yml
+---
+dependencies:
+  - role: common
+    vars:
+      some_parameter: 3
+  - role: apache
+    vars:
+      apache_port: 80
+  - role: postgres
+    vars:
+      dbname: blarg
+      other_parameter: 12
+Ansible always executes roles listed in dependencies before the role that lists them. Ansible executes this pattern recursively when you use the roles keyword. For example, if you list role foo under roles:, role foo lists role bar under dependencies in its meta/main.yml file, and role bar lists role baz under dependencies in its meta/main.yml, Ansible executes baz, then bar, then foo
