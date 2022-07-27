@@ -1,8 +1,8 @@
 [frontend]
-frontend.roboshop.internal
+fronten-prod.roboshop.internal
 
 [mongodb]
-mongodb.roboshop.internal
+mongodb-prod.roboshop.internal
 
 [catalogue]
 catalogue.roboshop.internal
