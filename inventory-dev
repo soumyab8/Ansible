@@ -2,16 +2,16 @@
 frontend-dev.roboshop.internal
 
 [mongodb]
-mongodb.roboshop.internal
+mongodb-dev.roboshop.internal
 
 [catalogue]
-catalogue.roboshop.internal
+catalogue-dev.roboshop.internal
 
 [redis]
-redis.roboshop.internal
+redis-dev.roboshop.internal
 
 [user]
-user.roboshop.internal
+user-dev.roboshop.internal
 
 [cart]
 cart.roboshop.internal
