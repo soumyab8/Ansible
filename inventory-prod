@@ -5,13 +5,13 @@ fronten-prod.roboshop.internal
 mongodb-prod.roboshop.internal
 
 [catalogue]
-catalogue.roboshop.internal
+catalogue-prod.roboshop.internal
 
 [redis]
-redis.roboshop.internal
+redis-prod.roboshop.internal
 
 [user]
-user.roboshop.internal
+user-prod.roboshop.internal
 
 [cart]
 cart.roboshop.internal
