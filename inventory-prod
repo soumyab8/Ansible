@@ -20,10 +20,10 @@ cart-prod.roboshop.internal
 mysql-prod.roboshop.internal
 
 [shipping]
-shipping.roboshop.internal
+shippin-prod.roboshop.internal
 
 [rabbitmq]
-rabbitmq.roboshop.internal
+rabbitmq-prod.roboshop.internal
 
 [payment]
 payment.roboshop.internal
