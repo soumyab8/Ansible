@@ -14,10 +14,10 @@ redis-prod.roboshop.internal
 user-prod.roboshop.internal
 
 [cart]
-cart.roboshop.internal
+cart-prod.roboshop.internal
 
 [mysql]
-mysql.roboshop.internal
+mysql-prod.roboshop.internal
 
 [shipping]
 shipping.roboshop.internal
