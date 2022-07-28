@@ -33,6 +33,7 @@
     - catalogue 
     - users
 
+# Ensure you run this at the end of all the tasks only.
 - name: Set-hostname 
   ansible.builtin.include_role:
     name: common 
