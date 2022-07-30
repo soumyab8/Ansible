@@ -44,7 +44,7 @@
   ansible.builtin.lineinfile:
     path: /home/{{APPUSER}}/{{COMPONENT}}.ini
     regexp: '^gid'
-    line: {{APPUSER_REGISTER.gid}}       
+    line: {{APPUSER_REGISTER.group}}       
 
 # - name: Configuring and starting {{COMPONENT}}
 #   ansible.builtin.include_role:
