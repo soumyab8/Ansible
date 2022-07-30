@@ -38,20 +38,20 @@
   ansible.builtin.lineinfile:
     path: /home/{{APPUSER}}/{{COMPONENT}}.ini
     regexp: '^uid'
-    line: {{APPUSER_REGISTER.uid}}
+    line: "{{APPUSER_REGISTER.uid}}"
 
 - name: Update gid
   ansible.builtin.lineinfile:
     path: /home/{{APPUSER}}/{{COMPONENT}}.ini
     regexp: '^gid'
-    line: {{APPUSER_REGISTER.group}}       
+    line: "{{APPUSER_REGISTER.group}}"    
 
-# - name: Configuring and starting {{COMPONENT}}
-#   ansible.builtin.include_role:
-#     name: common
-#     tasks_from: systemd
+- name: Configuring and starting {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: systemd
 
-# - name: set the hostname
-#   ansible.builtin.include_role:
-#     name: common
-#     tasks_from: set-hostname
+- name: set the hostname
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: set-hostname
