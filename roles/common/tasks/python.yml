@@ -36,13 +36,13 @@
 
 - name: Update uid
   ansible.builtin.lineinfile:
-    path: /home/{{APPUSER}}/{{COMPONENT}}.ini
+    path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
     regexp: '^uid'
     line: "{{APPUSER_REGISTER.uid}}"
 
 - name: Update gid
   ansible.builtin.lineinfile:
-    path: /home/{{APPUSER}}/{{COMPONENT}}.ini
+    path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
     regexp: '^gid'
     line: "{{APPUSER_REGISTER.group}}"    
 
