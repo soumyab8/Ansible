@@ -26,17 +26,13 @@
     requirements: /home/{{APPUSER}}/{{COMPONENT}}/requirements.txt
     executable: pip3
 
-- name: Registering {{APPUSER}} uid and gid
-  ansible.builtin.shell: id {{APPUSER}}
-  register: APPUSER_REGISTER
+# - name: Registering {{APPUSER}} uid and gid
+#   ansible.builtin.shell: id {{APPUSER}}
+#   register: APPUSER_REGISTER
 
-- name: save data to variable
+- name: printing APPUSER output
   debug:
-    msg: "{{APPUSER_REGISTER['msg'] | json_query('stdout.uid')}}"
-
-# - name: printing APPUSER output
-#   debug:
-#     msg: "{{APPUSER_REGISTER.stdout.uid}}"     
+    msg: "{{APPUSER_REGISTER.stdout.uid}}"     
 
 # - name: Configuring and starting {{COMPONENT}}
 #   ansible.builtin.include_role:
