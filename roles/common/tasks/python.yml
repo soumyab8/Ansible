@@ -32,7 +32,19 @@
 
 - name: printing APPUSER output
   debug:
-    msg: "{{APPUSER_REGISTER}}"     
+    msg: "{{APPUSER_REGISTER}}"
+
+- name: Update uid
+  ansible.builtin.lineinfile:
+    path: /home/{{APPUSER}}/{{COMPONENT}}.ini
+    regexp: '^uid'
+    line: {{APPUSER_REGISTER.uid}}
+
+- name: Update gid
+  ansible.builtin.lineinfile:
+    path: /home/{{APPUSER}}/{{COMPONENT}}.ini
+    regexp: '^gid'
+    line: {{APPUSER_REGISTER.gid}}       
 
 # - name: Configuring and starting {{COMPONENT}}
 #   ansible.builtin.include_role:
