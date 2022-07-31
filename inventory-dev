@@ -1,29 +1,29 @@
-[frontend]
+[frontend-dev]
 frontend-dev.b49.roboshop.internal
 
-[mongodb]
+[mongodb-dev]
 mongodb-dev.b49.roboshop.internal
 
-[catalogue]
+[catalogue-dev]
 catalogue-dev.b49.roboshop.internal
 
-[redis]
+[redis-dev]
 redis-dev.b49.roboshop.internal
 
-[user]
+[user-dev]
 user-dev.b49.roboshop.internal
 
-[cart]
+[cart-dev]
 cart-dev.b49.roboshop.internal
 
-[mysql]
+[mysql-dev]
 mysql-dev.b49.roboshop.internal
 
-[shipping]
+[shipping-dev]
 shipping-dev.b49.roboshop.internal
 
-[rabbitmq]
+[rabbitmq-dev]
 rabbitmq-dev.b49.roboshop.internal
 
-[payment]
+[payment-dev]
 payment-dev.b49.roboshop.internal
