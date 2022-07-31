@@ -1,5 +1,6 @@
 - name: Playbook to setup the roboshop project
-  hosts: localhost
+  #hosts: localhost - use this for ansible pull
+  hosts: "{{COMPONENT}}"
   become: yes
   roles:
     - "{{COMPONENT}}"
