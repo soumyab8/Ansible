@@ -15,3 +15,17 @@
     - name: Print Hello from Play2 
       ansible.builtin.debug:
         msg: Hello from task1 of play2 
+
+
+--- 
+
+- name: creating a file 
+  hosts: all 
+  tasks:
+  - name: Touch again the same file, but do not change times this makes the task idempotent
+    ansible.builtin.file:
+      path: /etc/foo.conf
+      state: touch
+      mode: u+rw,g-wx,o-rwx
+      modification_time: preserve
+      access_time: preserve
