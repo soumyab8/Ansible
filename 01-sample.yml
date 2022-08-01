@@ -22,7 +22,7 @@
 - name: creating a file 
   hosts: all 
   tasks:
-  - name: Touch again the same file, but do not change times this makes the task idempotent
+  - name: Creating an empty file
     ansible.builtin.file:
       path: /etc/foo.conf
       state: touch
