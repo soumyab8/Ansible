@@ -26,3 +26,4 @@
     ansible.builtin.file:
       path: /home/centos/apple.txt 
       state: touch
+      owner: centos 
