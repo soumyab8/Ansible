@@ -23,7 +23,7 @@
   hosts: all 
   tasks:
   - name: Creating an empty file
-    ansible.builtin.file:
+    file:
       path: /home/centos/apple.txt 
       state: touch
       owner: centos 
