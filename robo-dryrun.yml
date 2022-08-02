@@ -7,7 +7,7 @@
   gather_facts: False
   vars:
     instance_type: "t3.micro"
-    security_group_id: "sg-0bf27dd0bb525e6b9"
+    security_group_id: "sg-0bf27dd0bb525e6b9"  # Update as per your security group ip
     image: "ami-074d0805b2cd17376"
     region: "us-east-1"
   tasks:
