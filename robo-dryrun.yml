@@ -7,8 +7,8 @@
   gather_facts: False
   vars:
     instance_type: "t3.micro"
-    security_group_id: "sg-0bf27dd0bb525e6b9"  # Update as per your security group ip
-    image: "ami-074d0805b2cd17376"             # Update as per your security group ip
+    security_group_id: "sg-0bf27dd0bb525e6b9"  # Update as per your security group id
+    image: "ami-074d0805b2cd17376"             # Update as per your ami-id id, ensure this ami has ANSIBLE installed ( as it runs ansible-pull)
     region: "us-east-1"
   tasks:
     - name: Launch instance
@@ -31,8 +31,8 @@
     - name: Wait for SSH to come up
       delegate_to: "{{ item.public_ip }}"
       wait_for_connection:
-        delay: 50
-        timeout: 90
+        delay: 30  # Initial delay to ensure we run the playbook only after the system accepts the ssh connection. To avoid false failures.
+        timeout: 60
       loop: "{{ ec2.instances }}"
       ignore_errors: yes
 

@@ -52,7 +52,7 @@
       block:
         - name: Import a role
           import_role:
-            name: "{{role_name}}"
+            name: "{{COMPONENT}}"
           ignore_errors: yes
           become: yes
       always:
