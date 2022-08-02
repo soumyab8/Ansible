@@ -49,7 +49,7 @@
         INSTANCE_ID: "{{hostvars['localhost']['INSTANCE_ID']}}"
 
     - name: Import the role
-      block:
+      block:                              # Block is used to club 2 or more tasks in a single task
         - name: Import a role
           import_role:
             name: "{{role_name}}"
