@@ -1,7 +1,7 @@
 # Launch instances, runs some tasks
 # and then terminate them
 
-- name: Playbook to create the ec2, do a run run and then self-destroy
+- name: Playbook to create the ec2, do a dryn run and then self-destroy
   hosts: localhost
   gather_facts: False
   vars:
