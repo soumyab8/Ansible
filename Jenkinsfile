@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     parameters {
-         choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Pick something')
+         choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Chose the environment')
          string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
     }
     environment { 
