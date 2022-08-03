@@ -11,7 +11,7 @@
     image: "ami-074d0805b2cd17376"             # Update as per your ami-id id, ensure this ami has ANSIBLE installed ( as it runs ansible-pull)
     region: "us-east-1"
   tasks:
-    - name: Launch instance
+    - name: Launch instance                    # Creates ec2 instance 
       amazon.aws.ec2:
         group_id: "{{ security_group_id }}"
         instance_type: "{{ instance_type }}"
@@ -22,13 +22,13 @@
           Name: ansible-dryrun-check
       register: ec2
 
-    - name: Add new instance to host group
+    - name: Add new instance to host group    # Adding the IP Address of the created instance under the groupName launched and this in in-memory
       add_host:
         hostname: "{{ item.public_ip }}"
         groupname: launched  # name of the group
       loop: "{{ ec2.instances }}"
 
-    - name: Wait for SSH to come up
+    - name: Wait for SSH to come up           # Sleep task till SSH is open
       delegate_to: "{{ item.public_ip }}"
       wait_for_connection:
         delay: 30  # Initial delay to ensure we run the playbook only after the system accepts the ssh connection. To avoid false failures.
@@ -36,7 +36,7 @@
       loop: "{{ ec2.instances }}"
       ignore_errors: yes
 
-    - name: Set a Instance_ID Variable
+    - name: Set a Instance_ID Variable       # Registering the variable INSTANCE_ID with the tagName, so that we can use it in the next play
       set_fact:
         INSTANCE_ID: "{{ ec2.instance_ids }}"
 
@@ -46,7 +46,7 @@
   tasks:
     - name: set the facts per host
       set_fact:
-        INSTANCE_ID: "{{hostvars['localhost']['INSTANCE_ID']}}"
+        INSTANCE_ID: "{{hostvars['localhost']['INSTANCE_ID']}}"   # This is how we take the variables from the previous play of the same playbook
 
     - name: Import the role
       block:                              # Block is used to club 2 or more tasks in a single task
