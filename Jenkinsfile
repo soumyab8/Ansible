@@ -2,7 +2,7 @@ pipeline {
     agent any 
     parameters {
          choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Chose the environment')
-         string(name: 'COMPONENT', defaultValue: '', description: 'Who should I say hello to?')
+         string(name: 'COMPONENT', defaultValue: '', description: 'Enter the name of the component')
     }
     environment { 
         SSH_CRED = credentials('SSH-Cenos7')
