@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Do a dry-run') {
             steps {
-                sh "env"
+                sh "env"   // Just to see tne env variables
                 sh "ansible-playbook robot-dryrun.yml -e ansible_user=centos -e ansible_password=DevOps321 -e COMPONENT=mongodb -e ENV=dev"
             }
         }
