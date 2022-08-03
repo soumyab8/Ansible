@@ -1,5 +1,8 @@
 pipeline {
     agent any 
+    parameters {
+        //     //     choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+    }
     environment { 
         SSH_CRED = credentials('SSH-Cenos7')
     }
