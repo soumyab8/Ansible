@@ -11,6 +11,6 @@ echo "Creating new tag $VERSION"
 git tag $VERSION  
 
 echo "Pushing the new tag $VERSION"
-git 
+git push --tags 
 
 
