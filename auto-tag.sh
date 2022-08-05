@@ -7,6 +7,7 @@ echo "LATEST_TAG: $C1.$C2.$C3"
 C3=$((C3+1))
 VERSION="$C1.$C2.$C3"
 echo "New Tag is : $VERSION"
-git push
+echo "Creating new tag $VERSION"
+
 
 
