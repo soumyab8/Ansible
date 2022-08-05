@@ -6,7 +6,7 @@ pipeline {
     }
     environment { 
         SSH_CRED = credentials('SSH-Cenos7')
-        SGIT = credentials('GitHub-Token')
+        GIT = credentials('GitHub-Token')
     }
     stages {
         
