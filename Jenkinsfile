@@ -29,6 +29,7 @@ pipeline {
         stage('Tagging') {
             when { branch 'main' }       
             steps {
+                sh "git tag -l"
                // sh "bash -x auto-tag.sh"
             }
         }
