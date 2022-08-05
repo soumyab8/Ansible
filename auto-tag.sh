@@ -8,6 +8,9 @@ C3=$((C3+1))
 VERSION="$C1.$C2.$C3"
 echo "New Tag is : $VERSION"
 echo "Creating new tag $VERSION"
+git tag $VERSION  
 
+echo "Pushing the new tag $VERSION"
+git 
 
 
