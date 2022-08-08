@@ -31,7 +31,7 @@ environment {
         stage('Tagging') {
             when { branch 'main' }       
             steps {
-                git branch: 'main', url: "https://${GIT_USR}:${GIT_PSW}@github.com/b49-clouddevops/ansible.git"   // Git Clone
+                git branch: 'main', url: "https://${GIT_USR}:${GIT_PSW}@github.com/soumyab8/Ansible.git"   // Git Clone
                 sh "env"
                 sh "bash -x auto-tag.sh"   
             }
