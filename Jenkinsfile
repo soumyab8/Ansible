@@ -10,21 +10,22 @@ environment {
 }
     stages{
 
-        stage('Lint Checks') {  // This will be executed against the feature branch only
+        stage('Lint Checks') {  
+            when { branch pattern: "feature-.*", comparator: "REGEXP"} // This will be executed against the feature branch only
             steps {
-                when { branch pattern: "feature-.*", comparator: "REGEXP"}
                 sh "env"
                 sh "echo Style Checks"
                 sh "echo running is feature branch"
             }
         }
 
-        // stage('Do a dry-run') {        // This will be executed only when you raise a PR
-        //     steps {
-        //         sh "env"   // Just to see tne environment variables as a part of the pipeline
-        //         sh "ansible-playbook robo-dryrun.yml -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e COMPONENT=${params.COMPONENT} -e ENV=${params.ENV}"
-        //     }
-        // }
+        stage('Do a dry-run') {
+            when { branch pattern: "PR-.*", comparator: "REGEXP"}        // This will be executed only when you raise a PR
+            steps {
+                sh "env"   // Just to see tne environment variables as a part of the pipeline
+                sh "ansible-playbook robo-dryrun.yml -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e COMPONENT=${params.COMPONENT} -e ENV=${params.ENV}"
+            }
+        }
 
         stage('promote to prod'){
             when { branch 'main' }
