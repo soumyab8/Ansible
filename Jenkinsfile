@@ -6,7 +6,7 @@ parameters {
          string(name: 'COMPONENT', defaultValue: '', description: 'Enter the name of the component')
     }
 environment { 
-        SSH_CRED = credentials('SSH-Cenots7')
+        SSH_CRED = credentials('SSH-Centos7')
 }
     stages{
         stage('Do a dry-run') {        // This will be executed only when you raise a PR
