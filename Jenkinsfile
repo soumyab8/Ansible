@@ -9,10 +9,27 @@ environment {
         SSH_CRED = credentials('SSH-Centos7')
 }
     stages{
-        stage('Do a dry-run') {        // This will be executed only when you raise a PR
+
+        stage('Lint Checks') {  // This will be executed against the feature branch only
             steps {
-                sh "env"   // Just to see tne environment variables as a part of the pipeline
-                sh "ansible-playbook robo-dryrun.yml -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e COMPONENT=${params.COMPONENT} -e ENV=${params.ENV}"
+                when { branch pattern: "feature-.*", comparator: "REGEXP"}
+                sh "env"
+                sh "echo Style Checks"
+                sh "echo running is feature branch"
+            }
+        }
+
+        // stage('Do a dry-run') {        // This will be executed only when you raise a PR
+        //     steps {
+        //         sh "env"   // Just to see tne environment variables as a part of the pipeline
+        //         sh "ansible-playbook robo-dryrun.yml -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e COMPONENT=${params.COMPONENT} -e ENV=${params.ENV}"
+        //     }
+        // }
+
+        stage('promote to prod'){
+            when { branch 'main' }
+            steps{
+                sh "echo runs only when you push a tag"                
             }
         }
     }
