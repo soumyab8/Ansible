@@ -7,6 +7,7 @@ parameters {
     }
 environment { 
         SSH_CRED = credentials('SSH-Centos7')
+        GIT = credentials('github-token')
 }
     stages{
 
