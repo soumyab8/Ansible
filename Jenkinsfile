@@ -22,12 +22,12 @@ environment {
         stage('Do a dry-run') {
             when { branch pattern: "PR-.*", comparator: "REGEXP"}        // This will be executed only when you raise a PR
             steps {
-                sh "env"   // Just to see tne environment variables as a part of the pipeline
+                sh "env"   // Just to see the environment variables as a part of the pipeline
                 sh "ansible-playbook robo-dryrun.yml -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e COMPONENT=${params.COMPONENT} -e ENV=${params.ENV}"
             }
         }
 
-        stage('promote to prod'){
+        stage('promote to prod') {
             when { branch 'main' }
             steps{
                 sh "echo runs only when you push a tag"                
