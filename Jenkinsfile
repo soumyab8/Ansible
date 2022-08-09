@@ -12,7 +12,7 @@ environment {
     stages{
 
         stage('Lint Checks') {  
-            when { branch pattern: "feature-.*", comparator: "REGEXP"} // This will be executed against the feature branch only
+            when { branch pattern: "feature-.*", comparator: "REGEXP"}    // This will be executed against the feature branch only
             steps {
                 sh "env"
                 sh "echo Style Checks"
