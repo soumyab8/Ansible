@@ -1,6 +1,8 @@
 pipeline {
     agent any 
 
+    stages{
+
 // parameters {
 //          choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Chose the environment')
 //          string(name: 'COMPONENT', defaultValue: '', description: 'Enter the name of the component')
@@ -28,13 +30,13 @@ pipeline {
             }
         }
 
-        stage('Tagging') {
-            when { branch 'main' }       
-            steps {
-                git branch: 'main', url: "https://${GIT_USR}:${GIT_PSW}@github.com/soumyab8/Ansible.git"   // Git Clone
-                sh "bash -x auto-tag.sh"   
-            }
-        }
+        // stage('Tagging') {
+        //     when { branch 'main' }       
+        //     steps {
+        //         git branch: 'main', url: "https://${GIT_USR}:${GIT_PSW}@github.com/soumyab8/Ansible.git"   // Git Clone
+        //         sh "bash -x auto-tag.sh"   
+        //     }
+        // }
 
         // stage('promote to prod') {
         //     when { branch 'main' }
